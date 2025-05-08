@@ -1,53 +1,53 @@
-# PMR System - New Folder Structure and Process.
+# Epic System - New Folder Structure and Process.
 # Legacy system do not use
 
-do not use this to build PMR's there is a newwer standard.  THis is leacy historical refreence info only.
+Do not use this to build Epics—there is a newer standard. This is legacy historical reference info only.
 
 ---
 
 ## Purpose
 
-Plan Migration and Retirement (PMRs) documents capture major platform changes: system migrations, retirements, data model shifts, and major architectural refactors.  
+Epic documents capture major platform changes: system migrations, retirements, data model shifts, and major architectural refactors.  
 They provide a phased, verifiable, auditable roadmap for implementation.
-Note that some old PMR do not follow this docuemnt and we are not retrofillting old ducments to new standards.
+Note that some old Epics do not follow this document and we are not retrofitting old documents to new standards.
 
-This README governs PMRs created after the folder structure update.  
-(PMRs before this still live under the legacy system.)
+This README governs Epics created after the folder structure update.  
+(Epics before this still live under the legacy system.)
 
 ---
 
 ## Folder Structure
 
-Each PMR now lives in its own folder.
+Each Epic now lives in its own folder.
 
 | Path                                               | Contents                                       |
 |----------------------------------------------------|-----------------------------------------------|
-| `/public/pmr/PMR_Current/PMR_<topic>/`             | Active PMR and all related documentation      |
-| `/public/pmr/PMR_Completed/PMR_<topic>/`           | Completed PMR and all supporting docs, archived |
+| `/AI-Guild/Tracking/Epics/Current/Epic_<topic>/`   | Active Epic and all related documentation     |
+| `/AI-Guild/Tracking/Epics/Completed/Epic_<topic>/` | Completed Epic and all supporting docs, archived |
 
-Inside each PMR folder are documents. Build only the documents you deem necessary based on the scope:
+Inside each Epic folder are documents. Build only the documents you deem necessary based on the scope:
 
-- `PMR_<topic>.md` → Main document  
+- `Epic_<topic>.md` → Main document  
 - Additional supporting files (optional):  
-  - `PMR_<topic>_Communication.md`  
-  - `PMR_<topic>_Summary.md`  
-  - `PMR_<topic>_Approach.md`  
-  - `PMR_<topic>_API_Changes.md`  
-  - `PMR_<topic>_UI_Changes.md`  
+  - `Epic_<topic>_Communication.md`  
+  - `Epic_<topic>_Summary.md`  
+  - `Epic_<topic>_Approach.md`  
+  - `Epic_<topic>_API_Changes.md`  
+  - `Epic_<topic>_UI_Changes.md`  
 
 ---
 
-## Required Structure for `PMR_<topic>.md`
+## Required Structure for `Epic_<topic>.md`
 
-Each PMR must follow this template:
+Each Epic must follow this template:
 
 ---
 
-# PMR_<topic>
+# Epic_<topic>
 
 ### Summary
 
-High-level purpose and context of this PMR.
+High-level purpose and context of this Epic.
 
 ### Scope
 
@@ -59,7 +59,7 @@ High-level purpose and context of this PMR.
 
 ### Motivation
 
-Why this migration or retirement is being undertaken.
+Why this large endeavor is being undertaken.
 
 ### Changes
 
@@ -82,15 +82,15 @@ Exact steps to revert the changes if needed.
 
 ### Dependencies
 
-Other PMRs, API versions, systems, or external services this PMR depends on.
+Other Epics, API versions, systems, or external services this Epic depends on.
 
-### Linked PMRs
+### Linked Epics
 
-Cross-references to related or prerequisite PMRs.
+Cross-references to related or prerequisite Epics.
 
 ### Owner
 
-Primary owner (team or individual) responsible for this PMR.
+Primary owner (team or individual) responsible for this Epic.
 
 ---
 
@@ -176,24 +176,24 @@ Phase-specific clarifications, side decisions, or extra context.
 
 ---
 
-## PMR Process
+## Epic Process
 
-1. Create Folder: `/public/pmr/PMR_Current/PMR_<topic>/`  
-2. Write `PMR_<topic>.md` following the structure above.  
+1. Create Folder: `/AI-Guild/Tracking/Epics/Current/Epic_<topic>/`  
+2. Write `Epic_<topic>.md` following the structure above.  
 3. Optional: Add supporting files (Communication, API changes, etc.).  
 4. Maintain Status & Next Steps table during active work.  
 5. When completed:  
-   - Move folder to `/public/pmr/PMR_Completed/`  
-   - Update any cross-PMR references if needed.
+   - Move folder to `/AI-Guild/Tracking/Epics/Completed/`  
+   - Update any cross-Epic references if needed.
 
 ---
 
 ## Best Practices
 
-- **Markdown Only:** All PMRs written in `.md` format.  
+- **Markdown Only:** All Epics written in `.md` format.  
 - **Small, Verifiable Phases:** Each phase should be individually stable and testable.  
 - **Clear Status Tracking:** Always update the Status & Next Steps table first.  
-- **Linked Documents:** Keep supporting files in the PMR folder itself.  
+- **Linked Documents:** Keep supporting files in the Epic folder itself.  
 - **Rollback Plans:** Always be ready to revert safely.  
 - **History Friendly:** Every major update should leave a clean audit trail.
 

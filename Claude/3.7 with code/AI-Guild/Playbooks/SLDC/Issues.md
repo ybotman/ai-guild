@@ -1,8 +1,7 @@
 # Issue: {name}
 
 ## Overview
-This is a lightweight formal issue log to capture, trace, and resolve a specific bug. It is stored in the `/public/issues/current/` folder and moved to `/public/issues/completed/` upon resolution.
-
+This is a lightweight formal issue log to capture, trace, and resolve a specific bug. It is stored in the `/AI-Guild/Tracking/Issues/current/` folder and moved to `/AI-Guild/Tracking/Issues/completed/` upon resolution.
 
 ## Details
 - **Reported On:** [YYYY-MM-DD]
@@ -42,7 +41,7 @@ Use clear status indicators:
 
 ---
 
-> Store under: `/public/issues/current/Issue_<short-title>.md` and move to `/public/issues/completed/` when resolved. 
+> Store under: `/AI-Guild/Tracking/Issues/current/Issue_<short-title>.md` and move to `/AI-Guild/Tracking/Issues/completed/` when resolved. 
 
 # SNR after interactions
 - SNR = Summerize, NextSteps, RequestRoles

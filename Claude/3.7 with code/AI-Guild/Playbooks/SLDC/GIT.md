@@ -1,4 +1,4 @@
-# Git Promotion and CICD Strategy for I/F/P Management
+# Git Promotion and CICD Strategy for I/F/EManagement
 
 ## Environment Flow
 
@@ -7,21 +7,21 @@ DEVL --> TEST --> INTG --> PROD
 ```
 
 ## Assumptions
-1. **User Responsibility:** It is the user's job to bring the correct version into DEVL before starting an I/F/P (Issue/Feature/PMR) process.
+1. **User Responsibility:** It is the user's job to bring the correct version into DEVL before starting an I/F/E (Issue/Feature/Epic) process.
 2. **Explicit Promotion:** Versions do **not** automatically promote from one environment to the next. Promotion must be explicitly requested and confirmed.
 3. **Numbering Scheme:**
    - Issues: Start at 1000+
    - Features: Start at 3000+
-   - PMRs: Start at 5000+
+   - Epics: Start at 5000+
    - Numbers are sequential within their category.
-4. **New I/F/P:** Creating a new I/F/P assigns a new incremental number and title.
+4. **New I/F/E:** Creating a new I/F/E assigns a new incremental number and title.
 
 ---
 
 ## Git Workflow (DEVL Phase)
 
 ### 1. General Strategy
-- Each Issue, Feature, or PMR (I/F/P) is developed in its own branch.
+- Each Issue, Feature, or Epic (I/F/E) is developed in its own branch.
 - Branch is created **from DEVL**.
 - Work is managed and tracked individually via branches and corresponding markdown docs.
 
@@ -31,11 +31,11 @@ DEVL --> TEST --> INTG --> PROD
 |:----|:------|
 | **1.** | Confirm the current Git branch is `DEVL`. |
 | **2.** | If not on `DEVL`, abort with a message: "Not on DEVL, cannot proceed." |
-| **3.** | If updating an existing I/F/P, checkout the existing branch. |
-| **4.** | If creating a new I/F/P: |
+| **3.** | If updating an existing I/F/E, checkout the existing branch. |
+| **4.** | If creating a new I/F/E: |
 | | ➔ Assign the next number in the correct sequence. |
-| | ➔ Create a new branch from DEVL: `issue/1022-title`, `feature/3018-title`, `pmr/5002-title`. |
-| **5.** | First commit must contain creation/update of the I/F/P tracking markdown file. |
+| | ➔ Create a new branch from DEVL: eg: `issue/1022-title`, `feature/3018-title`, `epic/5002-title`. |
+| **5.** | First commit must contain creation/update of the I/F/E tracking markdown file. |
 | **6.** | Develop incrementally, recording an SNR (Summarize, Next Steps, Role) after each working session. |
 | **7.** | Run ESLint (`npm run lint`) and fix any errors. |
 | **8.** | Run Build (`npm run build`) and verify success. |
@@ -52,11 +52,11 @@ DEVL --> TEST --> INTG --> PROD
 |:-----|:--------|
 | Issue | `issue/1022-user-name-blank` |
 | Feature | `feature/3018-add-user-latlong-to-vendor` |
-| PMR | `pmr/5002-refactor-large-js` |
+| Epic | `epic/5002-refactor-large-js` |
 
 - Use lowercase letters.
 - Replace spaces with hyphens.
-- Prefix with `issue/`, `feature/`, or `pmr/`.
+- Prefix with `issue/`, `feature/`, or `epic/`.
 
 ---
 
@@ -65,7 +65,7 @@ DEVL --> TEST --> INTG --> PROD
 - ✅ Successful build.
 - ✅ Successful local development run.
 - ✅ All SNRs properly documented.
-- ✅ Final I/F/P update and confirmation.
+- ✅ Final I/F/E update and confirmation.
 
 ---
 
@@ -79,7 +79,7 @@ DEVL --> TEST --> INTG --> PROD
 ## Visual Summary
 
 ```
-Start --> Check DEVL Branch --> Create/Checkout I/F/P Branch --> First Commit (doc) --> Code/Develop (SNRs) --> ESLint/Build/Run --> Final Review --> Merge to DEVL --> Delete Branch
+Start --> Check DEVL Branch --> Create/Checkout I/F/E Branch --> First Commit (doc) --> Code/Develop (SNRs) --> ESLint/Build/Run --> Final Review --> Merge to DEVL --> Delete Branch
 ```
 
 ---
@@ -96,7 +96,7 @@ Start --> Check DEVL Branch --> Create/Checkout I/F/P Branch --> First Commit (d
 
 ✅ Always verify you are on the correct branch.
 ✅ Always enforce lint, build, and local runs before merge.
-✅ Always track Issues, Features, PMRs via markdown and SNR.
+✅ Always track Issues, Features, Epics via markdown and SNR.
 
 ---
 

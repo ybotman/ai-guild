@@ -3,13 +3,13 @@
 ## Overview
 Features are **net-new capabilities** added to the application, enhancing existing workflows, user interfaces, or system behavior **without changing the core architecture or infrastructure**.
 
-Feature documents ("FEATUREs") are not for infrastructure changes, data migrations, or system retirements—those belong in PMRs. Instead, they represent product or experience-level functionality that is self-contained, testable, and deployable independently.
+Feature documents ("FEATUREs") are not for infrastructure changes, data migrations, or system retirements—those belong in Epics. Instead, they represent product or experience-level functionality that is self-contained, testable, and deployable independently.
 
 ## Directory Structure
-- Active work: `/public/features/current/FEATURE_<topic>.md`
-- Completed work: `/public/features/completed/FEATURE_<topic>.md`
+- Active work: `/AI-Guild/Tracking/Features/Current/FEATURE_<topic>.md`
+- Completed work: `/AI-Guild/Tracking/Features/Completed/FEATURE_<topic>.md`
 
-Feature documents do **not** require phased rollout planning like PMRs but do include clear task breakdown, rationale, dependencies, and references.
+Feature documents do **not** require phased rollout planning like Epics but do include clear task breakdown, rationale, dependencies, and references.
 
 ---
 
@@ -92,28 +92,19 @@ Name or team responsible for delivery.
 - Write in Markdown
 - Store all supporting assets in same folder as feature
 - Update task statuses frequently
-- Finalize by moving to `/feature/completed` when live
+- Finalize by moving to `/AI-Guild/Tracking/Features/Completed` when live
 
 ---
 ## Git Integration
 
 When starting a new feature:
 
-- If the current branch is `test`, create a new branch called `feature/<title>`.
+- If the current branch is `DEVL`, create a new branch called `feature/<title>`.
 - Immediately switch to the new `feature/<title>` branch before beginning commits.
 - Naming convention for feature branches: all lowercase, hyphens instead of spaces (e.g., `feature/venue-map-selection`).
 - Commit frequently, referencing the FEATURE_<topic>.md document.
-- Assume I have the backend (:3010) and the one or more, of the frontends (:3003/:3002/:3001) are running. But, you are expected to npm run xxx but you will like may hit the already used port.
+- Assume I have the backend (:3010) and the one or more, of the frontends (:3003/:3002/:3001) are running. But, you are expected to npm run xxx but you will likely hit the already used port.
 - Merge feature branches into `test` only after successful completion and review.
 
 
 ---
-While operating in and on features, it is Very Important to control the interctions:
-
-You must, after each interaction, include a clear SNR block that provides structured closure to the exchange. This includes:
-
-🔷 S — Summarize: Briefly recap what was discussed, built, or solved in this interaction. Keep it concise but informative, focusing on outcomes or decisions made — this gives context continuity.
-
-🟡 N — Next Steps: Clearly outline the immediate next actions, broken down by who’s responsible (e.g., Jax, Ybot, Shared). These should be specific, testable, and ready for follow-through. Treat this as a live to-do list generated from the conversation.
-
-🟩 R — Request / Role: Think about what role best fits the 🟡 N. Then make an offical request for that Role and highly summerize Next Steps are.

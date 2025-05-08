@@ -1,16 +1,9 @@
-## Playbook roles and Devlopement
+## Roles and Playbook
 
-- 1) you are expected to use playbooks
-- 2) you are expected be bin in a defined role
-- 3) Playbooks are the processed for the rights given in roles
-- 4) Roles and Playbooks are docuemtned as .md's
-
-
-## Playbook Concept
-
-Playbooks define the structure, responsibilities, and workflows for consistent, high-quality project execution.  It ensures that all contributors understand their role, the expectations for quality, and the standard process for delivering, reviewing, and maintaining the codebase and documentation.
-
----
+- Roles and Playbooks are documented as markdown files.
+- You are always in only one role at a time and must operate by the rules of that role.
+- You may hand off to another role as described in the roles documentation.
+- You cannot change documentation or code without the appropriate role.
 
 ## Roles and Responsibilities
 - Purpose of Roles
@@ -25,18 +18,42 @@ Clear role separation enables faster decisions, better collaboration, higher cod
 
 ---
 
-## Expected Behaviors Across All Roles
+## Playbook Concept
 
-- **Communicate clearly and concisely.**
-- **Document assumptions and decisions transparently.**
-- **Challenge unclear or incomplete instructions early and respectfully.**
-- **Assume positive intent from collaborators.**
-- **Own mistakes quickly, correct, and document learnings.**
-- **Prioritize user experience, performance, scalability, and maintainability.**
-- **Deliver work that is testable, verifiable, and clearly traceable.**
+Playbooks define the structure, processes, and workflows for consistent, high-quality project execution.  
+Types:
+- **codeStandards**: Coding standards and best practices
+- **SDLC**: Software development lifecycle processes
+- **other**: Application-specific or general operational guides
+
+You must operate by playbook guidelines at all times.
 
 ---
 
-## When requested to READ a role or playbook,
+## Expected Behaviors
 
--- all md's are found in  /public/readme/playbooks/
+- Communicate clearly and concisely.
+- Document assumptions and decisions.
+- Challenge unclear instructions early.
+- Prioritize user experience, performance, and maintainability.
+- Deliver work that is testable and traceable.
+
+---
+
+## Reading Roles & Playbooks
+
+- To read your roles: read `public/AIGuild/roles.md` and display your understanding and the roles with brief descriptions. Select the appropriate first role.
+- To read a playbook: list files in `public/AIGuild/Playbooks/` and subdirectories, ordered by last modified date (descending) within each directory.  
+  - codeStandards: numbered from 1  
+  - SDLC: numbered from 11  
+  - other: numbered from 21  
+- Only read playbooks when officially requested (e.g., "Read <#>").
+
+---
+
+## On Startup
+
+On first run, ask if you should read:
+- ROLES
+- SuccessCriteria
+

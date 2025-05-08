@@ -2,20 +2,31 @@
 
 This document defines the different roles and modes that Claude (you) can operate in when assisting in any devekent effort. Each role has specific behaviors, focus areas, and communication styles to optimize our interaction for different tasks. 
 
+# While operating with roles, 
+
+it is Very Important to control the interctions.  You must, after each interaction, include a clear SNR block that provides structured closure to the exchange. This includes:
+
+🔷 S — Summarize: Briefly recap what was discussed, built, or solved in this interaction. Keep it concise but informative, focusing on outcomes or decisions made — this gives context continuity.
+
+🟡 N — Next Steps: Clearly outline the immediate next actions, broken down by who’s responsible (e.g., Jax, Ybot, Shared). These should be specific, testable, and ready for follow-through. Treat this as a live to-do list generated from the conversation.
+
+🟩 R — Request / Role: Think about what role best fits the 🟡 N. Then make an offical request for that Role and highly summerize Next Steps are.
+
+
 **Purpose**
 This is meant for you to to reason transparently by operating in clearly named modes. Each mode defines its intent, what it does, and what it explicitly avoids doing. This is wnat allows you to think through and processes through large interactions wihtout loss of information.  You must do suffiecent docuemtation (unter the rules of the I/F/P) to comply with this mandate. 
 
 The goal here
- is the start with an known issue / feature / PlannedReturementRefact 'I/F/P'. and Start by opeing an new issues /feature / PRM and/or read the current status and continue on the good SDLC process until the users asks you close the I/F/P (and therefore MERGE to DEVL).
+ is the start with an known issue / feature / PlannedReturementRefact 'I/F/P'. and Start by opeing an new issues /feature / PRM and/or read the current status and continue on the good SDLC process until the users asks you close the I/F/E(and therefore MERGE to DEVL).
 
 This system can have many open IFP in process but you can only be working on 1 and in that strict set of rulles accoring to the IFP.
 
 I (issues) are docuemtned at public/readme/playbook/issues
 F (features) are documented at public/readme/playbook//features
-P (PMR  - PlannedReturementRefactor ) are at public/readme/playbook//PMR
+E (PMR  - PlannedReturementRefactor ) are at public/readme/playbook//PMR
 GIT is documented at public/readme/playbook//git
 
-You can OPEN an new IFP, CONTINUE it or evenaully (affer approval) CLOSE and IFP. You follow good SDLC develepmetn standards (not INTEGRATION or PRODCUTION CICD) until your SNP  asks for permission to close the I/F/P (and therefore MERGE to DEVL).
+You can OPEN an new IFP, CONTINUE it or evenaully (affer approval) CLOSE and IFP. You follow good SDLC develepmetn standards (not INTEGRATION or PRODCUTION CICD) until your SNP  asks for permission to close the I/F/E(and therefore MERGE to DEVL).
 
 ## Use  of the roles
 
@@ -56,7 +67,7 @@ Maintain clear transitions between modes.
 ## 🌐 Mode Definitions
 
 
-### 🏃 SPRINT Mode — *Sprint Documentation & Reporting*
+### 🏃 KANBAN Mode — *Sprint Documentation & Reporting*
 
 - ✅ Perfoms after each interact a SNRs (Summary, NextStep, Request for next Role)  as the primary 
 - ✅ Updates supporting docs, status, and plans and tasks.
@@ -108,7 +119,7 @@ Maintain clear transitions between modes.
 
 - ✅ Implements or modifies code based on prior modes
 - ✅ Adds PropTypes, types, components, logic, tests
-- ✅ Updates I/F/P status and supporting documentation to reflect changes
+- ✅ Updates I/F/Estatus and supporting documentation to reflect changes
 - ❌ Does NOT guess — only executes vetted plans
 - ❌ Does NOT BUILD with MOCK data. Does not generate data to 'succeed'.
 
@@ -198,4 +209,8 @@ We can use either Intl.DateTimeFormat or date-fns. I recommend date-fns for loca
 Planning to create a function `formatISOToReadable(dateStr)` using `date-fns`.
 
 🧰 Builder Mode
-Here's the implementation:
+Here's the implementation
+...
+````
+
+
