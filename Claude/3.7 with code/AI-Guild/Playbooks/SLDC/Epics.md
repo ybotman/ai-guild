@@ -1,24 +1,19 @@
-# Epic System - New Folder Structure and Process.
-# Legacy system do not use
-
-Do not use this to build Epics—there is a newer standard. This is legacy historical reference info only.
+# Epic System - Large Effort, Multi-Phase, Multi-Branch Process
 
 ---
 
 ## Purpose
 
-Epic documents capture major platform changes: system migrations, retirements, data model shifts, and major architectural refactors.  
-They provide a phased, verifiable, auditable roadmap for implementation.
-Note that some old Epics do not follow this document and we are not retrofitting old documents to new standards.
-
-This README governs Epics created after the folder structure update.  
-(Epics before this still live under the legacy system.)
+Epic documents define **large, multi-phase efforts** that drive major platform changes: migrations, retirements, data model shifts, and architectural refactors.  
+By definition, an Epic is broken into multiple phases, each with its own branch, work effort, and commit cycle.  
+**At any time, work is focused on a single phase branch of the larger Epic.**  
+Each phase must be independently completed, reviewed, and merged before the next phase begins.
 
 ---
 
 ## Folder Structure
 
-Each Epic now lives in its own folder.
+Each Epic lives in its own folder.
 
 | Path                                               | Contents                                       |
 |----------------------------------------------------|-----------------------------------------------|
@@ -59,7 +54,7 @@ High-level purpose and context of this Epic.
 
 ### Motivation
 
-Why this large endeavor is being undertaken.
+Why this large, multi-phase effort is being undertaken.
 
 ### Changes
 
@@ -94,35 +89,49 @@ Primary owner (team or individual) responsible for this Epic.
 
 ---
 
-### Tasks
+### Phases
 
-| Status         | Task                | Last Updated |
-|----------------|---------------------|--------------|
-| ✅ Complete    | Migrate DB schema   | 2025-04-23   |
-| 🚧 In Progress | Deploy staging API  | 2025-04-23   |
-| ⏳ Pending     | Run integration tests | -           |
+Each Epic is divided into multiple phases.  
+**Each phase:**
+- Has its own branch (e.g., `epic/5002-phase-1-db-migration`)
+- Is worked on and committed independently
+- Must be completed, reviewed, and merged before the next phase starts
+- May remove, refactor, or retire existing code as needed
+
+#### Example Phase Table
+
+| Phase    | Status         | Branch Name                        | Last Updated | Description                  |
+|----------|---------------|------------------------------------|--------------|------------------------------|
+| Phase 1  | ✅ Complete    | epic/5002-phase-1-db-migration     | 2025-04-23   | DB schema migration          |
+| Phase 2  | 🚧 In Progress | epic/5002-phase-2-api-refactor     | 2025-04-24   | API refactor                 |
+| Phase 3  | ⏳ Pending     | epic/5002-phase-3-ui-update        | -            | UI updates                   |
+
+---
+
+### Phase Template
+
+#### Phase N: <Phase Title>
+
+**Goals:**  
+- What this phase accomplishes.
+
+**Tasks:**
+
+| Status  | Task                 | Last Updated |
+|---------|----------------------|--------------|
+| ✅/🚧/⏳/❌ | Specific task description | YYYY-MM-DD   |
+
+**Rollback (if needed):**  
+- How to undo this phase if problems occur.
+
+**Notes:**  
+- Phase-specific clarifications, side decisions, or extra context.
 
 ---
 
 ### Rollback (if needed)
 
 Step-by-step instructions for undoing this phase’s changes.
-
----
-
-### Notes
-
-Any clarifying context or decisions specific to this phase.
-
----
-
-Use clear status indicators:  
-- ✅ Complete  
-- 🚧 In Progress  
-- ⏳ Pending  
-- ❌ Blocked  
-- 🔁 Rolled Back  
-- ⏸️ Deferred  
 
 ---
 
@@ -152,38 +161,18 @@ Keep this table updated continuously.
 
 ---
 
-## Phase N:
-
-### Goals
-
-What the phase accomplishes.
-
-### Tasks
-
-| Status  | Task                 | Last Updated |
-|---------|----------------------|--------------|
-| ✅/🚧/⏳/❌ | Specific task description | YYYY-MM-DD   |
-
-### Rollback (if needed)
-
-How to undo this phase if problems occur.
-
-### Notes
-
-Phase-specific clarifications, side decisions, or extra context.
-
----
-
----
-
 ## Epic Process
 
 1. Create Folder: `/AI-Guild/Tracking/Epics/Current/Epic_<topic>/`  
 2. Write `Epic_<topic>.md` following the structure above.  
-3. Optional: Add supporting files (Communication, API changes, etc.).  
-4. Maintain Status & Next Steps table during active work.  
-5. When completed:  
-   - Move folder to `/AI-Guild/Tracking/Epics/Completed/`  
+3. For each phase:
+   - Create a dedicated branch for the phase.
+   - Work only on that phase branch until complete.
+   - Complete, review, and merge before starting the next phase.
+4. Optional: Add supporting files (Communication, API changes, etc.).
+5. Maintain Status & Next Steps table during active work.
+6. When all phases are completed:
+   - Move folder to `/AI-Guild/Tracking/Epics/Completed/`
    - Update any cross-Epic references if needed.
 
 ---
@@ -196,5 +185,6 @@ Phase-specific clarifications, side decisions, or extra context.
 - **Linked Documents:** Keep supporting files in the Epic folder itself.  
 - **Rollback Plans:** Always be ready to revert safely.  
 - **History Friendly:** Every major update should leave a clean audit trail.
+- **Each phase may remove, refactor, or retire existing code as needed.**
 
 ---

@@ -11,11 +11,14 @@ It aligns with the Git promotion and CICD policy and ensures consistent handling
 - **I/F/E (Issue, Feature, Epic):**
   - **Issues:** Bug fixes, small improvements. Numbered from 1001+.
   - **Features:** Net-new capabilities or enhancements. Numbered from 3001+.
-  - **Epics:** Large endeavors with architectural changes, migrations, or major refactors. Numbered from 5001+.
+  - **Epics:** Large endeavors with architectural changes, migrations, or major refactors. Numbered from 5001+. OFtnen muit phase.
+
 - **Sequential Numbering:** Each new I/F/E gets the next available number.
 - **Git Enforcement:** All I/F/Es are managed via Git branches, commits, and PRs.
 
----
+## you may be ask 
+-- if this new tracking item the probem is best fit as an I F or E. Use your best guess.
+
 
 ## when asked to create a new Issue/Feature/Epic
 find the maximun number withing the IFE Type and add one. If its the first of the type, the types are numbered accouringly. Issues from 1001, features from 3001, Epics from 5001.
