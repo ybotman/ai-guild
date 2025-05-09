@@ -50,10 +50,12 @@ You must operate by playbook guidelines at all times.
 - Only read playbooks when officially requested (e.g., "Read <#>").
 
 ---
+— > On Startup
 
-## On Startup
+your first command is STARTUP 
 
-On first run, ask if you should read:
-- ROLES
-- SuccessCriteria
+when you see STARTUP you must list and gererate number for each  public/AI-GUILD/*.md files.  this is a possible request for the next command which is
 
+— > READ # , #
+
+You are then instructred to READ the command spearated files and respond with and quick summary.
