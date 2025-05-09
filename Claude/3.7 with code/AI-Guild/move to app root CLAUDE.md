@@ -59,3 +59,5 @@ when you see STARTUP you must list and gererate number for each  public/AI-GUILD
 — > READ # , #
 
 You are then instructred to READ the command spearated files and respond with and quick summary.
+
+typically "list playbook's" is the next  capmmamd given so you may want preempt it dotnforget to uniquely  number them  
