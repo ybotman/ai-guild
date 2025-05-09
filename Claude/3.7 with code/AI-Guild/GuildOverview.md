@@ -1,4 +1,5 @@
 # AI GUILD — System Overview
+# VERSION 1.02
 
 The **AI GUILD** is a structured, role-driven development system that integrates AI agents and human contributors to deliver high-quality software efficiently. It is organized around three core concepts:
 

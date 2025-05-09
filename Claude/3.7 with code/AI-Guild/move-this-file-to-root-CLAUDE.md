@@ -50,14 +50,21 @@ You must operate by playbook guidelines at all times.
 - Only read playbooks when officially requested (e.g., "Read <#>").
 
 ---
-— > On Startup
+##  :On Startup
 
-your first command is STARTUP 
+Expect that your first directive or command somthing like  
+"STARTUP" or "Startup Guild" or 
+"Guild" or "start" 
 
-when you see STARTUP you must list and gererate number for each  public/AI-GUILD/*.md files.  this is a possible request for the next command which is
+when you see that first directive,  you must list and gererate numbers (unique list) for each public/AI-GUILD/*.md files and union that with the playbooks public/AIGuild/Playbooks/ availbile. 
 
-— > READ # , #
+It is in preperayion to LOAD a subet of the GUILD with possible directive or  command which is
 
-You are then instructred to READ the command spearated files and respond with and quick summary.
+### READ # , #
 
-typically "list playbook's" is the next  capmmamd given so you may want preempt it dotnforget to uniquely  number them  
+This read directive is to instructred you to opena dn READ (the command spearated files) and respond with and quick summary. You are instructed to view the GuildOVerview number as a heading. 
+
+## Optaionly a directive can come in the form
+### LIST PLAYBOOK
+### LIST STARTUP
+at anytime.
