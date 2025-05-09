@@ -2,6 +2,10 @@
 
 **TangoTiempo** is the United States’ first fully dedicated Argentine Tango event calendar. It provides a centralized, intuitive, and mobile-friendly interface for dancers, organizers, and tango communities to post, find, and interact with tango events.
 
+## Short cut name is often just 
+* TT or
+* TT.com
+
 ---
 
 ## 🌐 Live Site

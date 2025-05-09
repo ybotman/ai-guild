@@ -11,6 +11,15 @@ The **Calendar Backend** serves as the central data management hub for the **Tan
 - **Ensure Security**: Implement Firebase authentication and authorization to manage user roles (e.g., NamedUser, RegionalOrganizer) and ensure that only authorized users can perform certain actions.
 - **Support Event Management**: Facilitate event management for organizers, including event creation, editing, and deletion based on user roles.
 
+## Short cut name is often just 
+* BE or
+* Cal-BE.com or
+* Calendar-BE.com or
+* C-BE
+
+
+---
+
 ## Technology Stack
 
 The Calendar Backend is built with the following technologies:
