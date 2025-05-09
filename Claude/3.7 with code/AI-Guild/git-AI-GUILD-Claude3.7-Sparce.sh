@@ -4,6 +4,12 @@
 REPO_URL="https://github.com/ybotman/ai-guild.git"
 SPARSE_PATH="Claude/3.7 with code/AI-Guild"
 TARGET_DIR="public/AI-Guild"
+# Add additional files or folders to include (relative to repo root)
+EXTRA_PATHS=(
+  "Claude/3.7 with code/AI-Guild/git-AI-GUILD-Claude3.7-Sparce.sh"
+  "Claude/3.7 with code/AI-Guild/move-this-file-to-root-CLAUDE.md"
+  # Add more paths here if needed, e.g. "somefile.md" or "somefolder/"
+)
 
 # === START ===
 echo "🔧 Setting up sparse checkout for AI-Guild..."
@@ -24,9 +30,17 @@ git remote add origin "$REPO_URL"
 # Step 4: Enable sparse checkout
 git config core.sparseCheckout true
 mkdir -p .git/info
-echo "$SPARSE_PATH/**" > .git/info/sparse-checkout
 
-# Step 5: Pull the data
+# Write sparse-checkout patterns
+{
+  echo "$SPARSE_PATH/**"
+  for path in "${EXTRA_PATHS[@]}"; do
+    echo "$path"
+  done
+} > .git/info/sparse-checkout
+
+# Step 5: Reapply and pull the data
+git sparse-checkout reapply
 git pull origin main --depth=1
 
 echo "✅ Done. AI-Guild synced into $TARGET_DIR"
