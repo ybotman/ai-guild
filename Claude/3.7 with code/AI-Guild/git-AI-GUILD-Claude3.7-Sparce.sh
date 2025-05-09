@@ -24,7 +24,7 @@ git remote add origin "$REPO_URL"
 # Step 4: Enable sparse checkout
 git config core.sparseCheckout true
 mkdir -p .git/info
-echo "$SPARSE_PATH/" > .git/info/sparse-checkout
+echo "$SPARSE_PATH/**" > .git/info/sparse-checkout
 
 # Step 5: Pull the data
 git pull origin main --depth=1
