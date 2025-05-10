@@ -36,9 +36,12 @@ The **AI GUILD** is a structured, role-driven development system that integrates
 ---
 
 ## 4. IFE Tracking
-### the .md's are held in /public/IFE-Tracking
+### (I) Issues bugs and problems , 
+### (F) Features - net new, 
+### (E) Epic - the biggies multi phase
+### are documeted as .md's and the the .md's are held in /public/IFE-Tracking/<Issues>|<Features>|<Epics><docuement>
 
-- **Tracking** provides the standards and rules for managing Issues, Features, and Epicss (I/F/E) across the system.
+- **Tracking** provides the standards and rules for managing Issues, Features, and Epics (I/F/E) across the system.
 - It defines naming conventions, branch structure, and workflow for traceable, high-quality development.
 - All tracking documentation and policies are maintained in this directory for reference and enforcement.
 
