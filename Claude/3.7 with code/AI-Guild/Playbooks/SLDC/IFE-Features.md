@@ -1,5 +1,10 @@
 # FEATURE_<topic>
 
+> **IFE Feature Document**  
+> This document is the single source of truth for capturing all decisions, actions, and status updates related to this feature.  
+> **Guild roles** must update this file directly, in their own sections, using their role icon and a datetime stamp.  
+> All recommendations, decisions, and assignments must be recorded here by the responsible role.
+
 ## Overview
 Features are **net-new capabilities** added to the application, enhancing existing workflows, user interfaces, or system behavior **without changing the core architecture or infrastructure**.
 
@@ -16,6 +21,47 @@ Feature documents do **not** require phased rollout planning like Epics but do i
 ## Template Structure
 
 # FEATURE_<topic>
+
+> **Guidance:**  
+> Each Guild role must update its own section below, using its icon and a datetime stamp.  
+> The only mandatory roles are:  
+> - 🗂️ **KANBAN**: Tracks what must be done, who is assigned, and current status.  
+> - 🧭 **SCOUT**: Records research, discoveries, and risks.  
+> - 🏛️ **ARCHITECT**: Documents user-approved decisions, technical recommendations, and rationale.  
+> - 🛠️ **BUILDER**: Notes implementation details, blockers, and technical choices.  
+>  
+> All updates, decisions, and recommendations **must** be made in this document, clearly marked by role and timestamp.  
+> Add other roles as needed, following the same pattern.
+
+## 🗂️ KANBAN (Required)
+_What must be done, who is assigned, and current status.  
+All task assignments and workflow status updates go here._  
+**Last updated:** YYYY-MM-DD HH:mm
+
+- [ ] Example: Assign "Create initial UI component" to @username
+
+## 🧭 SCOUT (Required)
+_Research, discoveries, risks, and open questions.  
+Document findings and recommendations here._  
+**Last updated:** YYYY-MM-DD HH:mm
+
+- Example: "Found existing library X may help with Y."
+
+## 🏛️ ARCHITECT (Required)
+_User-approved decisions, technical recommendations, and rationale.  
+Document all architectural notes and user approvals here._  
+**Last updated:** YYYY-MM-DD HH:mm
+
+- Example: "User approved use of API Z for this feature."
+
+## 🛠️ BUILDER (Required)
+_Implementation details, blockers, and technical choices.  
+Document what was built, how, and any issues encountered._  
+**Last updated:** YYYY-MM-DD HH:mm
+
+- Example: "Implemented endpoint /api/feature-x, see PR #123."
+
+---
 
 ## Summary
 One-paragraph description of the new feature and what it introduces into the system.
@@ -87,6 +133,8 @@ Name or team responsible for delivery.
 ---
 
 ## Best Practices
+- This document is the **authoritative record** for all feature-related actions and decisions.
+- Each Guild role must update its own section, using its icon and a datetime stamp.
 - Keep features self-contained and verifiable
 - Avoid scope creep — create a new FEATURE doc if needed
 - Write in Markdown

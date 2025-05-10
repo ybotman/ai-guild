@@ -1,5 +1,20 @@
 # Epic System - Large Effort, Multi-Phase, Multi-Branch Process
 
+> **IFE Epic Document**  
+> This document is the single source of truth for all actions, decisions, and status updates related to this Epic.  
+> All Guild roles must update their own section below, using their role icon and a datetime stamp.  
+> All assignments, findings, and technical notes must be recorded here by the responsible role.  
+>  
+> Epics are always **phased** and **heavily documented**.  
+> Epics may include:  
+> - Large refactors (even if functionally equivalent)  
+> - Software design changes  
+> - Plugin or dependency swaps  
+> - Cross-cutting context or folder structure redesigns  
+> - Any multi-file, multi-phase, or architectural effort  
+>  
+> **Every Epic must include architecture diagrams, graphical summaries, or annotated visuals** to ensure broad understanding and continuity across Guild handoffs or "reboots."
+
 ---
 
 ## Purpose
@@ -7,7 +22,8 @@
 Epic documents define **large, multi-phase efforts** that drive major platform changes: migrations, retirements, data model shifts, and architectural refactors.  
 By definition, an Epic is broken into multiple phases, each with its own branch, work effort, and commit cycle.  
 **At any time, work is focused on a single phase branch of the larger Epic.**  
-Each phase must be independently completed, reviewed, and merged before the next phase begins.
+Each phase must be independently completed, reviewed, and merged before the next phase begins.  
+**The phased approach ensures broad understanding and continuity, even if the Guild team changes or the project is rebooted.**
 
 ---
 
@@ -39,6 +55,56 @@ Each Epic must follow this template:
 ---
 
 # Epic_<topic>
+
+> **Guidance:**  
+> Each Guild role must update its own section below, using its icon and a datetime stamp.  
+> The only mandatory roles are:  
+> - 🗂️ **KANBAN**: Tracks what must be done, who is assigned, and current status.  
+> - 🧭 **SCOUT**: Records research, discoveries, and risks.  
+> - 🛠️ **BUILDER / PATCH / TINKER**: Notes implementation details, blockers, and technical choices.  
+>  
+> All updates, decisions, and recommendations **must** be made in this document, clearly marked by role and timestamp.  
+> Add other roles as needed, following the same pattern.  
+>  
+> **Include at least one architecture diagram, graphical summary, or annotated visual for each Epic and for each major phase.**  
+> Store images in the Epic folder and embed them below.
+
+## 🗂️ KANBAN (Required)
+_What must be done, who is assigned, and current status.  
+All task assignments and workflow status updates go here._  
+**Last updated:** YYYY-MM-DD HH:mm
+
+- [ ] Example: Assign "Refactor folder structure" to @username
+
+## 🧭 SCOUT (Required)
+_Research, discoveries, risks, and open questions.  
+Document findings and recommendations here._  
+**Last updated:** YYYY-MM-DD HH:mm
+
+- Example: "Found that plugin X is incompatible with new structure."
+
+## 🛠️ BUILDER / PATCH / TINKER (Required)
+_Implementation details, blockers, and technical choices.  
+This section may be labeled as **BUILDER**, **PATCH**, or **TINKER**—use whichever role is appropriate.  
+Document what was built, how, and any issues encountered._  
+**Last updated:** YYYY-MM-DD HH:mm
+
+- Example: "Refactored all context providers into /contexts/, see PR #789."
+
+---
+
+### Architecture & Visuals
+
+_Provide at least one architecture diagram, graphical summary, or annotated visual for this Epic.  
+Update or add visuals for each major phase as needed.  
+Store images in the Epic folder and embed them here using Markdown:_
+
+```
+![System Architecture](./Epic_<topic>_Architecture.png)
+```
+_or link to a Miro, Lucidchart, or Figma board if preferred._
+
+---
 
 ### Summary
 
@@ -97,6 +163,7 @@ Each Epic is divided into multiple phases.
 - Is worked on and committed independently
 - Must be completed, reviewed, and merged before the next phase starts
 - May remove, refactor, or retire existing code as needed
+- **All phase-specific actions, decisions, and notes must be recorded in the role sections above and in the phase table below**
 
 #### Example Phase Table
 
@@ -179,6 +246,7 @@ Keep this table updated continuously.
 
 ## Best Practices
 
+- **This document is the authoritative, phased, and heavily documented record for the Epic.**
 - **Markdown Only:** All Epics written in `.md` format.  
 - **Small, Verifiable Phases:** Each phase should be individually stable and testable.  
 - **Clear Status Tracking:** Always update the Status & Next Steps table first.  
@@ -186,5 +254,6 @@ Keep this table updated continuously.
 - **Rollback Plans:** Always be ready to revert safely.  
 - **History Friendly:** Every major update should leave a clean audit trail.
 - **Each phase may remove, refactor, or retire existing code as needed.**
+- **All Guild roles must update their own section, using their icon and a datetime stamp.**
 
 ---

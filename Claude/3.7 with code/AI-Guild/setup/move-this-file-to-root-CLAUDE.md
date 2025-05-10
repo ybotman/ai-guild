@@ -60,7 +60,8 @@ when you see that first directive,  you must
 2) and union that with the 
 3) list of playbooks public/AIGuild/Playbooks/ availbile. 
 4) and union that with then
-5) list of applction playbooks (all the *.md only) in public/AIGuild/Applcation-Playbooks/<folder>/*.md all sub directroes
+5) list of applction playbooks (all the *.md only) in public/AIGuild/Playbooks/Appications/<folder-subfolder>/*.md all sub directroes
+
 
 ## the directive 
 ### LIST PLAYBOOKS (or LIST INVENTORY). will restart the ### startup command
@@ -89,6 +90,11 @@ at anytime.
 -- LIST <>
 -- READ <>
 -- WhatsUp (this directrive you must NOT do any BASH,  and only summerize whay you know about the curret guild and playbooks you have read specificly by name)
--- Open (IFE)
--- Close (IFE)
+-- Open (I/F/E)
+-- Close (I/F/E)
+-- Status is a request to KANBAN to read the IFE # and summerzie what we are doing.
 -- SNR (Summerize, NextSteps, Request Role)
+-- SWITCH <role> (switch to that role and abide by its guidelines and contunie)
+-- Approved <text> (used after a SNR to accpet the recommendations of N and R and my have minor mods in <text>)
+-- Denied or Not Approve.  Go go KanBan or Mirror mode to reasses,
+

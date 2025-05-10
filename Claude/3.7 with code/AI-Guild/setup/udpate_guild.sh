@@ -31,4 +31,4 @@ mv $SPARSE_PATH/* .
 top="${SPARSE_PATH%%/*}"
 rm -rf "$top"
 
-echo "✅ public/$TARGET_DIR is up to date."
+echo "✅ public/$TARGET_DIR is up to date." 
