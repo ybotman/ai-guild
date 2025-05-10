@@ -48,9 +48,9 @@ IFE are in 1 state Completed or Current.  The directory tells us this (and the d
 ### 2. I/F/E Document Naming
 | Type    | Folder                                      | Format                          | Example                              |
 |:--------|:--------------------------------------------|:---------------------------------|:-------------------------------------|
-| Issue   | `/AI-Guild/Tracking/Issues/Current/`        | `Issue_1022_UserNameBlank.md`   | `/AI-Guild/Tracking/Issues/Current/Issue_1022_UserNameBlank.md`   |
-| Feature | `/AI-Guild/Tracking/Features/Current/`      | `Feature_3018_AddUserLatLongVendor.md` | `/AI-Guild/Tracking/Features/Current/Feature_3018_AddUserLatLongVendor.md` |
-| Epic    | `/AI-Guild/Tracking/Epics/Current/`         | `Epic_5002_RefactorLargeJs.md`  | `/AI-Guild/Tracking/Epics/Current/Epic_5002_RefactorLargeJs.md`   |
+| Issue   | ` /public/IFE-Tracking/Issues/Current/`        | `Issue_1022_UserNameBlank.md`   | ` /public/IFE-Tracking/Issues/Current/Issue_1022_UserNameBlank.md`   |
+| Feature | ` /public/IFE-Tracking/Features/Current/`      | `Feature_3018_AddUserLatLongVendor.md` | ` /public/IFE-Tracking/Features/Current/Feature_3018_AddUserLatLongVendor.md` |
+| Epic    | ` /public/IFE-Tracking/Epics/Current/`         | `Epic_5002_RefactorLargeJs.md`  | ` /public/IFE-Tracking/Epics/Current/Epic_5002_RefactorLargeJs.md`   |
 
 - **CamelCase** after the numeric prefix.
 - **Prefix** with `Issue_`, `Feature_`, or `Epic_`.

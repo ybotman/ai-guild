@@ -17,8 +17,8 @@ Each Epic lives in its own folder.
 
 | Path                                               | Contents                                       |
 |----------------------------------------------------|-----------------------------------------------|
-| `/AI-Guild/Tracking/Epics/Current/Epic_<topic>/`   | Active Epic and all related documentation     |
-| `/AI-Guild/Tracking/Epics/Completed/Epic_<topic>/` | Completed Epic and all supporting docs, archived |
+| ` /public/IFE-Tracking/Epics/Current/Epic_<topic>/`   | Active Epic and all related documentation     |
+| ` /public/IFE-Tracking/Epics/Completed/Epic_<topic>/` | Completed Epic and all supporting docs, archived |
 
 Inside each Epic folder are documents. Build only the documents you deem necessary based on the scope:
 
@@ -163,7 +163,7 @@ Keep this table updated continuously.
 
 ## Epic Process
 
-1. Create Folder: `/AI-Guild/Tracking/Epics/Current/Epic_<topic>/`  
+1. Create Folder: ` /public/IFE-Tracking/Epics/Current/Epic_<topic>/`  
 2. Write `Epic_<topic>.md` following the structure above.  
 3. For each phase:
    - Create a dedicated branch for the phase.
@@ -172,7 +172,7 @@ Keep this table updated continuously.
 4. Optional: Add supporting files (Communication, API changes, etc.).
 5. Maintain Status & Next Steps table during active work.
 6. When all phases are completed:
-   - Move folder to `/AI-Guild/Tracking/Epics/Completed/`
+   - Move folder to ` /public/IFE-Tracking/Epics/Completed/`
    - Update any cross-Epic references if needed.
 
 ---

@@ -5,9 +5,9 @@ This document defines the different roles and modes that Claude (you) can operat
 **Purpose and PLAYBOOKS**
 ROLES interact with other PLAYBOOKS. Each role uses the appropriate PLAYBOOK to produce great stable code with longer-term focus of matching the document goals and objective (via I/F/P's). The SDLC playbooks are in the public/readme/playbooks. This is meant for you to reason transparently by operating in clearly named modes. Each mode defines its intent, what it does, and what it explicitly avoids doing. This is what allows you to think through and process through large interactions without loss of information. You must do sufficient documentation (under the rules of the I/F/P) to comply with this mandate. 
 
-I (issues) are fully documented at /AI-Guild/Tracking/Issues/ (Current/Completed)
-F (features) are fully documented at /AI-Guild/Tracking/Features/ (Current/Completed)
-E (Epics - Large Endeavors with architectural changes, migrations, or major refactors) are documented at /AI-Guild/Tracking/Epics/ (Current/Completed)
+I (issues) are fully documented at /public/IFE-Tracking/Issues/ (Current/Completed)
+F (features) are fully documented at /public/IFE-Tracking/Features/ (Current/Completed)
+E (Epics - Large Endeavors with architectural changes, migrations, or major refactors) are documented at /public/IFE-Tracking/Epics/ (Current/Completed)
 GIT strategy is documented at /AI-Guild/Playbooks/SLDC/IFP.md
 
 This system can have many open IFE in process but you can only be working on 1 and in that strict set of rules according to the IFE.

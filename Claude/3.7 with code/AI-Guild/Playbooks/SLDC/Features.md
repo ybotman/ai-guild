@@ -6,8 +6,8 @@ Features are **net-new capabilities** added to the application, enhancing existi
 Feature documents ("FEATUREs") are not for infrastructure changes, data migrations, or system retirements—those belong in Epics. Instead, they represent product or experience-level functionality that is self-contained, testable, and deployable independently.
 
 ## Directory Structure
-- Active work: `/AI-Guild/Tracking/Features/Current/FEATURE_<topic>.md`
-- Completed work: `/AI-Guild/Tracking/Features/Completed/FEATURE_<topic>.md`
+- Active work: ` /public/IFE-Tracking/Features/Current/FEATURE_<topic>.md`
+- Completed work: ` /public/IFE-Tracking/Features/Completed/FEATURE_<topic>.md`
 
 Feature documents do **not** require phased rollout planning like Epics but do include clear task breakdown, rationale, dependencies, and references.
 
@@ -92,7 +92,7 @@ Name or team responsible for delivery.
 - Write in Markdown
 - Store all supporting assets in same folder as feature
 - Update task statuses frequently
-- Finalize by moving to `/AI-Guild/Tracking/Features/Completed` when live
+- Finalize by moving to ` /public/IFE-Tracking/Features/Completed` when live
 
 ---
 ## Git Integration
