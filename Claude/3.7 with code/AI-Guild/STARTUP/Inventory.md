@@ -20,3 +20,9 @@
 18. Applications/howto.md
 19. Applications/harmony-junction/Inventory.md
 20. Applications/staticSites/howto.md
+
+
+## Upon reading this file you should
+-- show them to the user in this order, and 
+-- ask whihc one you shourld read and abide by
+

@@ -41,7 +41,7 @@ You must operate by playbook guidelines at all times.
 - @public/STARTUP/Directives.md
 - @public/STARTUP/Roles.md
 - @public/STARTUP/SuccessCriteria.md
-- @public/STARTUP/Inventory
+- @public/STARTUP/Inventory.md
 
 - - you must summerzie these files, follow what they say- 
 - - and list the inventory according to its direction
