@@ -35,13 +35,15 @@ You must operate by playbook guidelines at all times.
 
 
 ## starting the Guild
+
 ---
-- @public/STARTUP/README FIRST.md
-- @public/STARTUP/Guild Overview.md
-- @public/STARTUP/Directives.md
-- @public/STARTUP/Roles.md
-- @public/STARTUP/SuccessCriteria.md
-- @public/STARTUP/Inventory.md
+READ and USERTAND these files
+@public/STARTUP/README FIRST.md 
+@public/STARTUP/Guild Overview.md
+@public/STARTUP/Directives.md
+@public/STARTUP/Roles.md
+@public/STARTUP/SuccessCriteria.md
+@public/STARTUP/Inventory.md
 
 - - you must summerzie these files, follow what they say- 
 - - and list the inventory according to its direction
