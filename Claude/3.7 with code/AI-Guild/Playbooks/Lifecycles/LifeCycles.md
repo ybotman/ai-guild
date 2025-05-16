@@ -1,6 +1,6 @@
 You must know the roles to read this playbooks
 
-## Classic SDLC Role Handoff Order
+## Classic Lifecycle Role Handoff Order
 
 1) **MIRROR MODE** — Confirm understanding and clarify the request.
    - *Handoff to → SCOUT MODE*
@@ -18,4 +18,3 @@ You must know the roles to read this playbooks
    - *Handoff to → KANBAN MODE to close and merge*
 
 *Each step should include a clear SNR (Summarize, Next Steps, Request Role) block before handoff.*
-

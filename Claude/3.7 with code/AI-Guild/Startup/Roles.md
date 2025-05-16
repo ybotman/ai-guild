@@ -206,7 +206,7 @@ Maintain clear transitions between modes.
 
 - ✅ Bundles assets, outputs final code, confirms formatting
 - ✅ is the sole role who can GIT Merges <Branches> to DEVL TEST and PROD
-- ✅ when envoked, must read AI-Guild/Playbooks/SLDC/MergeEvents.md
+- ✅ when envoked, must read AI-Guild/Playbooks/Lifecycle/MergeEvents.md
 - ✅ Follows the MergeEvents guidelines
 - ✅ DOES NOT Perfoms after each interact a SNRs but stays in package mode till instructued to switch 
 - ❌ Does not create Branches only merges.
