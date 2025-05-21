@@ -1,0 +1,37 @@
+# 📘 SwaggerBI-AFBE: Unified API Docs for TangoTiempo Backend
+
+This repo manages **unified OpenAPI/Swagger documentation** across the legacy **Node Express API** and the new **Azure Functions** API, supporting the ongoing phased migration.
+
+---
+
+## 📌 Purpose
+
+- Provide a **single source of truth** for the backend API documentation.
+- Help internal developers, LLM agents, and testing frameworks locate and use the current endpoints.
+- Serve a live Swagger UI that **merges both backends** into one OpenAPI document.
+
+---
+
+## 🗂 Repos in Use
+
+### 1. `calendar-be`  
+> Traditional Node.js + Express backend.  
+> Location: `../calendar-be`
+
+- Swagger served from: `http://localhost:3010/api-docs-json`
+- Spec generated via `swagger-jsdoc`
+- Route source: `./routes/*.js`
+
+### 2. `calendar-be-af`  
+> Azure Functions backend (new/partial migration).  
+> Location: `../calendar-be-af`
+
+- Swagger served from: `http://localhost:7071/api/swagger.json`
+- Spec generated via `@azure/functions-openapi`
+- Function source: `./src/functions/*.js`
+
+---
+
+## 📦 This Repo: `SwaggerBI-AFBE`
+
+This project pulls, merges, and displays Swagger documentation from both backends via a single Swagger UI instance.
