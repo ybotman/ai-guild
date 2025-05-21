@@ -35,3 +35,29 @@ This repo manages **unified OpenAPI/Swagger documentation** across the legacy **
 ## 📦 This Repo: `SwaggerBI-AFBE`
 
 This project pulls, merges, and displays Swagger documentation from both backends via a single Swagger UI instance.
+
+⸻
+
+🧠 Guidance for LLM Agents
+	•	All available backend endpoints (both Express and Azure Functions) are to be described in OpenAPI format.
+	•	Swagger UI reads from:
+./openapi/combined.json
+	•	To understand any backend logic, refer to:
+	•	calendar-be/routes/*.js (Express API logic and annotations)
+	•	calendar-be-af/src/functions/*.js (Azure Function HTTP handlers)
+	•	Use operation summaries and tags in the Swagger spec to understand which functions belong to which backend.
+
+⸻
+
+🔐 Production Security (recommended)
+	•	Restrict /api-docs access to admin-only
+	•	Optionally use Firebase Auth headers or IP restrictions
+
+⸻
+
+🧪 Future Enhancements
+	•	Auto-regenerate docs on push via GitHub Actions
+	•	Add diff check to flag mismatched operations between legacy and AF
+	•	Tag routes by version or backend (x-backend: "Express" vs "AzureFunctions")
+
+⸻
