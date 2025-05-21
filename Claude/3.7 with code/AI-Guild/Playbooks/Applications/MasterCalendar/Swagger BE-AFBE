@@ -32,7 +32,7 @@ This repo manages **unified OpenAPI/Swagger documentation** across the legacy **
 
 ---
 
-## 📦 This Repo: `SwaggerBI-AFBE`
+## 📦 the Repo: `mastercalendar-swagger`
 
 This project pulls, merges, and displays Swagger documentation from both backends via a single Swagger UI instance.
 
