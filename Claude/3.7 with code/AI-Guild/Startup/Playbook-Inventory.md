@@ -31,6 +31,7 @@ Lifecycle (20x)
 Applications/MasterCalendar (30x)
 	301.	Applications/MasterCalendar/Geolocation System and Events.md
 	302.	Applications/MasterCalendar/Authenticaion to Role Workflow.md
+ 	303.    Applications/MasterCalendar/Swagger BE-AFBE.md
 
 Applications/calendar-be (31x)
 	311.	Applications/calendar-be/Appl Summary.md
