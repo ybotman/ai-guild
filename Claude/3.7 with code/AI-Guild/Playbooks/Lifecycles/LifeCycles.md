@@ -12,9 +12,13 @@ You must know the roles to read this playbooks
    - *Handoff to → BUILDER MODE*
 5) **BUILDER MODE** — Implement code, tests, and documentation as per the plan.
    - *Handoff to → KANBAN MODE*
+
+
 6) **KANBAN MODE** — Update status, record SNR, and coordinate review/approval.
    - *Handoff to → USER MODE for final approval*
 7) **USER MODE** — User reviews and approves the work for merge.
    - *Handoff to → KANBAN MODE to close and merge*
 
-*Each step should include a clear SNR (Summarize, Next Steps, Request Role) block before handoff.*
+Important notes
+* Each step should include a clear SNR (Summarize, Next Steps, Request Role) block before handoff.*
+* Without confirmin to the users,Every hand off to builder mode needs a "Confidence, Risks and Knowledge Gap Assemement"
