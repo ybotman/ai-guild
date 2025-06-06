@@ -3,6 +3,23 @@
 ## Overview
 This inventory tracks all Markdown documentation files in the AI-Guild repository, organized by functional area with a consistent numbering scheme.
 
+## How to Use This Inventory
+
+### Reading Options:
+1. **Read by Batches**: Read documents in numbered groups (e.g., all 10x Startup files, all 20x Lifecycle files)
+2. **List Full Inventory**: Review the complete list below to understand the repository structure
+
+### Instructions:
+1. **Start with 10x Startup section** - Essential foundation documents
+2. **Review relevant application sections** (30x-33x) based on your project focus
+3. **Consult Lifecycle documents** (20x) for development processes
+4. **Reference Setup** (50x) for environment configuration
+
+### Quick Navigation:
+- Use the numbering scheme to quickly reference documents
+- Documents are ordered by importance within each section
+- Cross-references between documents use the numbering system
+
 ---
 
 ## 10x: Startup
