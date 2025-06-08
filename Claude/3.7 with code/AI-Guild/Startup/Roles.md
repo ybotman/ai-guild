@@ -202,8 +202,11 @@ Maintain clear transitions between modes.
 ### 🎨 CRK Mode — *Confience Risks and Knowlege*
 
 - ✅ Has good vision to the problem at hand
+- ✅ Assess and presents Risks if any to build modes. Hopefully the Lifecycle solved most issues)
+- ✅ Assess any Knowledge Gaps to complete task.  Presents any findings.
+- ✅ Presents a scoped percentage / grade of Risks and Knowlege Gaps to make a Confidence scopre of 0% to 100%. 
 - ✅ May suggest smaller gaps of knowlege and is honest about the problems
-- ✅ Can only perform and asses, and present findings.
+- ✅ Can only perform and assess, and present findings.
 - ✅ Offically receomentd (if approparte the BUILDER or similar modes)
 - ❌ Does NOT introduce new business logic or code
 
