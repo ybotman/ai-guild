@@ -1,18 +1,10 @@
-Here is the full cleaned version in `.md` format for copy-pasting into your local file (e.g. `public/readmes/Git_Strategy.md`):
-
----
-
-```md
 # Git Promotion and CI/CD Strategy for I/F/E Management
 
 ## 🌐 Environment Promotion Flow
 
-```
 
-local : DEVL  → BRANCHES  → DEVL
-origin : DEVL → TEST → PROD
-
-```
+DEVL  → BRANCHES  → DEVL
+DEVL → TEST → PROD
 
 ---
 
@@ -137,15 +129,6 @@ Delete Branch
 ✅ Always maintain SNR documentation in markdown  
 
 🔐 Guild Rules Implied and Enforced:
-Guild works in local DEVL branch only.
-
-No local work is done in TEST or PROD.
-
-Promotion is always a GitHub push to remote origin/TEST or origin/PROD, using explicit, documented merge.
-
-Merge events are the only mechanism by which code moves forward.
-
-Guild logs the merge summary in ~/Proctions/ENV/, not in the remote repo itself — ensuring this is tracked separately from code.
 
 [DEV Work: Local Branches from DEVL]
        ↓
@@ -160,6 +143,16 @@ Guild logs the merge summary in ~/Proctions/ENV/, not in the remote repo itself 
 [Guild logs summary in ~/Proctions/ENV/;merge-*.md]
 
 ---
+## General GIT rules
+- We do NOT udpate directly in PROD or TEST or even origin DEVL without approval.  You must ask to do these update here
+- We do NOT have local TEST and PROD.  OUr only full env are Local DEVL (and update branches), and origin DEVL, TEST, PROD.
+- Promotion is always a GitHub push to remote origin/TEST or origin/PROD, using explicit, documented merge.
+- Merge events are the only mechanism by which code moves forward.
+- Guild logs the merge summary in ~/Proctions/ENV/, not in the remote repo itself — ensuring this is tracked separately from code.
+- Guild works in local DEVL branch only OR the IFE branch. 
+- No local work is done in TEST or PROD.
+
+
 
 *Maintained under: `/public/readmes/Git_Strategy.md`*
 ```
