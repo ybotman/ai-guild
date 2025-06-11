@@ -17,4 +17,12 @@ Repository URL: https://github.com/ybotman/ai-guild.git
 
 
 Upon agreeement of above (if there is not changes that go right to this step)
-**READ and FOLLOW** : public/AI-Guild/Startup/Playbook-Inventory.md
+
+Then you are to 
+**STARTUP the GIULD**
+  - Read, then summerzie the following:
+  -  10x: Startup (7 docs) - Foundation documents for getting started
+  - 20x: Lifecycle (8 docs) - Development processes and workflows
+
+The Group and List the other Application/Playbooks MD
+use public/AI-Guild/Startup/Playbook-Inventory.md as formating of whay you find but you have list the unread .md's
