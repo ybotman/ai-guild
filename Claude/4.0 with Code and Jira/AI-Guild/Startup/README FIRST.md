@@ -20,7 +20,7 @@ Upon agreeement of above (if there is not changes that go right to this step)
 
 Then you are to 
 **STARTUP the GIULD**
-  - Read, then summerzie the following:
+  - do cat all of Read, then summerzie the following:
   -  10x: Startup (7 docs) - Foundation documents for getting started
   - 20x: Lifecycle (8 docs) - Development processes and workflows
 
