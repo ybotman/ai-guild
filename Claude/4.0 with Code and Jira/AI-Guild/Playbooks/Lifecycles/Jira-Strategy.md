@@ -2,6 +2,7 @@
 
 ## STARTUP TEST (Important First STEP to JIRA connection)
 **You must TEST the JIRA tools to check connection when you have read this document**
+**Do not continue without a successful Jira Connection Test.
 
 ### Quick Connection Test
 ```bash
@@ -22,12 +23,55 @@ source .jira-config && JIRA_API_TOKEN=$(security find-generic-password -a "$(who
 
 ---
 
+## 📝 JIRA Comment Best Practices
+
+### ✅ What Works - Use This Format:
+```bash
+# Single-line, concise comments under 200 characters
+./jira-comment.sh TIEMPO-60 Scout "Investigated login issue. Root cause: session timeout on mobile browsers."
+
+# Role-based findings format
+./jira-comment.sh TIEMPO-60 Architect "Design decision: Use Material-UI Dialog. Benefits: mobile responsive, accessibility built-in."
+
+# Simple progress updates
+./jira-comment.sh TIEMPO-60 Builder "Implementation complete. Added CSS fixes for mobile modal headers."
+```
+
+### ❌ What Fails - Avoid These:
+```bash
+# Multi-line comments with newlines
+"Investigation findings:\n1. CSS issue\n2. Mobile viewport\n3. Z-index conflict"
+
+# Numbered lists or bullet points  
+"Steps taken: • Reviewed code • Tested mobile • Found solution"
+
+# Complex formatting or special characters
+"Analysis:\n- Issue A\n- Issue B\n\nRecommendation: Fix X"
+```
+
+### 🚨 Important: Always Verify Comments
+- **If you see "JSON parsing error" + "✅ Comment added"** → Check JIRA to confirm
+- **The comment MAY NOT have been added** despite success message
+- **Break complex information into multiple simple comments**
+
+### 📏 Comment Format Template:
+```
+Role: Brief action or finding. Key points: A, B, C.
+```
+
+**Examples:**
+- `Scout: Reproduced bug on iOS Safari. Issue occurs during form submission.`
+- `Architect: Recommending context refactor. Current state: fragmented, proposed: unified provider.`
+- `Builder: Feature implemented with tests. Changes: component updates, API integration, validation.`
+
+---
+
 ## 🔧 How to Use JIRA Tools Correctly
 
 ### Script Usage (Always run from project root)
 ```bash
-# Comments
-./public/AI-Guild/Scripts/jira-tools/jira-comment.sh TIEMPO-60 CRK "Your comment"
+# Comments - KEEP SIMPLE AND CONCISE
+./public/AI-Guild/Scripts/jira-tools/jira-comment.sh TIEMPO-60 CRK "Scout: Investigated modal issue. Found CSS z-index conflict in mobile viewport."
 
 # Worklog
 ./public/AI-Guild/Scripts/jira-tools/jira-worklog.sh add TIEMPO-60 Builder "2h" "Fixed modal"
@@ -45,10 +89,11 @@ source .jira-config && JIRA_API_TOKEN=$(security find-generic-password -a "$(who
 3. All scripts use this `JIRA_TOKEN` internally
 4. **No need to set JIRA_API_TOKEN manually**
 
-### Known "Error" Messages (Ignore These)
-- **"JSON parsing error"** is cosmetic - the `jq` command parsing the response
-- **As long as you see "✅ Comment added" or "✅ Logged time", it worked**
-- **No fix needed - just ignore the JSON error message**
+### Known "Error" Messages (Important Details)
+- **"JSON parsing error"** appears with complex comment formatting
+- **If you see "JSON parsing error" + "✅ Comment added"** - the comment MAY have worked
+- **Always check JIRA to verify** if the comment was actually added
+- **Use simple formatting** to avoid JSON parsing issues
 
 ---
 
@@ -259,8 +304,15 @@ Use JIRA's Epic functionality:
   ```
 
 #### "JSON parsing errors in output"
-- **Cause**: Cosmetic jq parsing issue in script output
-- **Solution**: **Ignore these - look for ✅ success messages**
+- **Cause**: Complex comment formatting with newlines, lists, or special characters
+- **Solution**: 
+  - **Use simple, single-line comments under 200 characters**
+  - **Always check JIRA to verify comment was added**
+  - **If comment failed, repost with simpler formatting**
+  ```bash
+  # Instead of complex formatting, use simple format:
+  ./jira-comment.sh TIEMPO-60 Scout "Found CSS conflict in mobile viewport affecting modal z-index"
+  ```
 
 ### Best Practices for Debugging
 1. **Start simple**: Use basic queries first
