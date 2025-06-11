@@ -26,5 +26,4 @@ cat public/AI-Guild/Startup/*.md public/AI-Guild/Lifecycle/*.md > combined-guild
 # Then read the single combined file
 AFter that summerzie you findings
 
-Then Group and List the other Application/Playbooks /*.md
-use public/AI-Guild/Startup/Playbook-Inventory.md as formating of whay you find but you have list the unread .md's
+# then you are to ask if there is any Appl Playbooks to read they are in 
