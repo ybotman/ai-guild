@@ -1,5 +1,13 @@
 # JIRA Strategy for AI-Guild
 
+
+## STARTUP TEST (Important First STEP to JIRA connection)
+ - You must TEST the JIRA tools to check connetion wehn you have read this docuent  
+ - Check the To Do tickets.
+ - The .jira-config is in the project root
+ - API token is stored in macOS keychain.
+ - Use the full authentication flow with: source .jira-config && JIRA_API_TOKEN=$(security find-generic-password -a "$(whoami)" -s "jira-api-token" -w)
+
 ## Overview
 This document defines the **JIRA workflow**, **ticket types**, and **integration with Git** for managing work items in the AI-Guild system. JIRA replaces the previous IFE (Issue/Feature/Epic) tracking system, providing a more robust and industry-standard approach to project management.
 
@@ -298,12 +306,26 @@ See jira-tools/README.md for setup instructions.
   "Run ./public/AI-Guild/Scripts/jira-tools/jira-search.sh from the project root to find To Do tickets,
   then use jira-ticket-summary.sh for details."
 
-  Key Learning:
+  ## JIRA Key Learning:
 
   The JIRA tools work perfectly when:
   1. Run from the correct directory (project root)
   2. Using the right script for the job
   3. Understanding the data might need manual filtering if JQL is finicky
+
+## JIRA CORE ISSUES The main issues were:
+
+  1. Token Storage Confusion: The JIRA Strategy documentation didn't mention that the API token is
+  stored in macOS keychain, not in the .jira-config file. I initially tried to read JIRA_API_TOKEN from
+  the config file, but it was empty.
+  2. Script Execution Context: The jira-tools scripts have built-in logic to get the token from
+  keychain, but they weren't outputting any errors when failing silently. Running them returned no
+  output instead of error messages.
+  3. URL Encoding: The JQL query needed proper URL encoding (spaces as %20, quotes as %27) for the
+  direct curl approach.
+  4. Missing Documentation Detail: The JIRA Strategy playbook should include:
+  # Token is stored securely in macOS keychain
+  JIRA_API_TOKEN=$(security find-generic-password -a "$(whoami)" -s "jira-api-token" -w)
 
 
 
