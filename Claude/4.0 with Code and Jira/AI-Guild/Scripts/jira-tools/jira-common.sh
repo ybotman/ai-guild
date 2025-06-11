@@ -3,8 +3,8 @@
 # Common JIRA configuration loader
 # Source this in all JIRA scripts: source ./jira-common.sh
 
-# Look for config file
-CONFIG_FILE="${JIRA_CONFIG_FILE:-$(dirname "$0")/.jira-config}"
+# Look for config file in app root
+CONFIG_FILE="${JIRA_CONFIG_FILE:-$(pwd)/.jira-config}"
 
 if [ -f "$CONFIG_FILE" ]; then
     source "$CONFIG_FILE"

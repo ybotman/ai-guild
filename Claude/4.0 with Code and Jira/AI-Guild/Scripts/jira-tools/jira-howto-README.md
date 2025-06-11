@@ -6,14 +6,14 @@ Command-line tools for JIRA integration, designed for AI-Guild workflow manageme
 
 ### 1. Configure Your Settings
 ```bash
-# Copy the example configuration
-cp .jira-config.example .jira-config
+# Copy the example configuration to your app root
+cp Claude/4.0\ with\ Code\ and\ Jira/AI-Guild/Scripts/jira-tools/.jira-config.example .jira-config
 
 # Edit with your settings
 nano .jira-config  # or use your preferred editor
 ```
 
-Update these values in `.jira-config`:
+Update these values in `.jira-config` (in your app root):
 - `JIRA_URL`: Your Atlassian instance (e.g., `https://yourcompany.atlassian.net`)
 - `JIRA_EMAIL`: Your JIRA login email
 - `PROJECT`: Your default project key (e.g., `PROJ`)
@@ -241,16 +241,17 @@ Display comprehensive ticket information including history, status changes, and 
 ## File Structure
 
 ```
-jira-tools/
-├── .jira-config.example    # Template configuration
+app-root/
 ├── .jira-config           # Your personal config (git ignored)
-├── .gitignore             # Excludes personal config
-├── jira-howto-README.md   # This file
-├── jira-common.sh         # Shared configuration loader
-├── jira-search.sh         # Search for issues
-├── jira-create-classified.sh  # Create labeled tickets
-├── jira-transition.sh     # Change ticket status
-├── jira-worklog.sh        # Log time by role
-├── jira-comment.sh        # Add findings/decisions
-└── jira-ticket-summary.sh # View ticket details
+└── Claude/4.0 with Code and Jira/AI-Guild/Scripts/jira-tools/
+    ├── .jira-config.example    # Template configuration
+    ├── .gitignore             # Excludes personal config
+    ├── jira-howto-README.md   # This file
+    ├── jira-common.sh         # Shared configuration loader
+    ├── jira-search.sh         # Search for issues
+    ├── jira-create-classified.sh  # Create labeled tickets
+    ├── jira-transition.sh     # Change ticket status
+    ├── jira-worklog.sh        # Log time by role
+    ├── jira-comment.sh        # Add findings/decisions
+    └── jira-ticket-summary.sh # View ticket details
 ```
