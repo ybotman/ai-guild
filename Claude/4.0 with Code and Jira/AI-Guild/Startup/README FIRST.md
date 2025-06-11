@@ -20,9 +20,11 @@ Upon agreeement of above (if there is not changes that go right to this step)
 
 Then you are to 
 **STARTUP the GIULD**
-  - do cat all of Read, then summerzie the following:
-  -  10x: Startup (7 docs) - Foundation documents for getting started
-  - 20x: Lifecycle (8 docs) - Development processes and workflows
+# Concatenate all startup and lifecycle docs into one file
+cat public/AI-Guild/Startup/*.md public/AI-Guild/Lifecycle/*.md > combined-guild-docs.md
 
-The Group and List the other Application/Playbooks MD
+# Then read the single combined file
+AFter that summerzie you findings
+
+Then Group and List the other Application/Playbooks /*.md
 use public/AI-Guild/Startup/Playbook-Inventory.md as formating of whay you find but you have list the unread .md's
