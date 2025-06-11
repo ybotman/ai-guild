@@ -1,15 +1,54 @@
 # JIRA Strategy for AI-Guild
 
-
 ## STARTUP TEST (Important First STEP to JIRA connection)
- - You must TEST the JIRA tools to check connetion wehn you have read this docuent  
- - Check the To Do tickets.
- - The .jira-config is in the project root
- - API token is stored in macOS keychain.
- - Use the full authentication flow with: source .jira-config && JIRA_API_TOKEN=$(security find-generic-password -a "$(whoami)" -s "jira-api-token" -w)
+**You must TEST the JIRA tools to check connection when you have read this document**
 
-## Overview
-This document defines the **JIRA workflow**, **ticket types**, and **integration with Git** for managing work items in the AI-Guild system. JIRA replaces the previous IFE (Issue/Feature/Epic) tracking system, providing a more robust and industry-standard approach to project management.
+### Quick Connection Test
+```bash
+# Run from project root
+source .jira-config
+./public/AI-Guild/Scripts/jira-tools/jira-search.sh "assignee=currentUser()"
+```
+
+### Authentication Setup
+- The `.jira-config` is in the project root
+- **API token is stored in macOS keychain** (not in .jira-config file)
+- Scripts handle authentication automatically via `jira-common.sh`
+
+### Full Authentication Flow (if needed)
+```bash
+source .jira-config && JIRA_API_TOKEN=$(security find-generic-password -a "$(whoami)" -s "jira-api-token" -w)
+```
+
+---
+
+## 🔧 How to Use JIRA Tools Correctly
+
+### Script Usage (Always run from project root)
+```bash
+# Comments
+./public/AI-Guild/Scripts/jira-tools/jira-comment.sh TIEMPO-60 CRK "Your comment"
+
+# Worklog
+./public/AI-Guild/Scripts/jira-tools/jira-worklog.sh add TIEMPO-60 Builder "2h" "Fixed modal"
+
+# Search
+./public/AI-Guild/Scripts/jira-tools/jira-search.sh "assignee=currentUser()"
+
+# Ticket Summary
+./public/AI-Guild/Scripts/jira-tools/jira-ticket-summary.sh TIEMPO-60
+```
+
+### What Happens Behind the Scenes
+1. `jira-common.sh` sources `.jira-config`
+2. Gets the token from keychain as `JIRA_TOKEN`
+3. All scripts use this `JIRA_TOKEN` internally
+4. **No need to set JIRA_API_TOKEN manually**
+
+### Known "Error" Messages (Ignore These)
+- **"JSON parsing error"** is cosmetic - the `jq` command parsing the response
+- **As long as you see "✅ Comment added" or "✅ Logged time", it worked**
+- **No fix needed - just ignore the JSON error message**
 
 ---
 
@@ -151,7 +190,7 @@ Use JIRA's Epic functionality:
 ./jira-search.sh "assignee=currentUser() AND status='In Progress'"
 
 # Check tickets in review
-./jira-search.sh "project=$PROJECT AND status='In Review'"
+./jira-search.sh "project=TIEMPO AND status='In Review'"
 ```
 
 ### Taking New Work
@@ -181,7 +220,7 @@ Use JIRA's Epic functionality:
 ./jira-search.sh "labels IN (broken, frontend) AND status != 'Done'"
 
 # This sprint's work
-./jira-search.sh "sprint in openSprints() AND project=$PROJECT"
+./jira-search.sh "sprint in openSprints() AND project=TIEMPO"
 
 # Unassigned high priority
 ./jira-search.sh "priority = High AND assignee is EMPTY"
@@ -189,40 +228,72 @@ Use JIRA's Epic functionality:
 
 ---
 
-## Best Practices
+## 🚨 Troubleshooting Guide
 
-### Ticket Creation
-- Write clear, actionable titles
-- Include reproduction steps for bugs
-- Define acceptance criteria for stories
-- Link related tickets
+### Common Issues and Solutions
 
-### Status Management
-- Update status in real-time
-- Don't leave tickets "In Progress" overnight
-- Use "In Review" for code review phase
-- Only mark "Done" after verification
+#### "Scripts return no output"
+- **Cause**: Running from wrong directory
+- **Solution**: Always run from project root where `.jira-config` exists
 
-### Time Tracking
-- Log time immediately after work
-- Use appropriate AI-Guild role
-- Include brief description of work done
-- Be accurate with time estimates
+#### "Authentication errors"
+- **Cause**: Token not in keychain or config issues
+- **Solution**: 
+  ```bash
+  # Check if token exists
+  security find-generic-password -a "$(whoami)" -s "jira-api-token" -w
+  
+  # Re-source config
+  source .jira-config
+  ```
 
-### Documentation
-- Complex features need design docs
-- Epics require architecture diagrams
-- Update ticket with findings/decisions
-- Link to relevant code/PRs
+#### "Empty search results"
+- **Cause**: JQL syntax or status name issues
+- **Solution**: Start simple, then add complexity
+  ```bash
+  # Start with basic query
+  ./jira-search.sh "assignee=currentUser()"
+  
+  # Filter results with jq instead of complex JQL
+  ./jira-search.sh "project=TIEMPO" | jq '.issues[] | select(.fields.status.name == "To Do")'
+  ```
+
+#### "JSON parsing errors in output"
+- **Cause**: Cosmetic jq parsing issue in script output
+- **Solution**: **Ignore these - look for ✅ success messages**
+
+### Best Practices for Debugging
+1. **Start simple**: Use basic queries first
+2. **Check from root**: Always run scripts from project root
+3. **Use jq filtering**: Filter large result sets locally instead of complex JQL
+4. **Trust success messages**: ✅ indicators mean it worked despite JSON errors
+5. **Check ticket IDs**: Verify ticket numbers exist and are accessible
+
+---
+
+## Tools and Scripts
+
+### Essential Scripts (Run from project root)
+- `jira-search.sh` - Find tickets with JQL
+- `jira-create-classified.sh` - Create properly labeled tickets
+- `jira-transition.sh` - Update ticket status
+- `jira-worklog.sh` - Log time by AI-Guild role
+- `jira-ticket-summary.sh` - View complete ticket history
+- `jira-comment.sh` - Add comments to tickets
+
+### Configuration Requirements
+- `.jira-config` must be in project root
+- API token must be in macOS keychain
+- Scripts handle authentication automatically
 
 ---
 
 ## Migration from IFE to JIRA
- IFE (Issues, Features, Epics) transistioned to JIRA in full.
 
-### IFE timeline
- - in Jun 2025 we migration from the IFE (Issues, Features, Epics) to JIRA.
- - Migration occured the old IFE and you many see the jira tickets.
+### IFE Timeline
+- In Jun 2025 we migrated from the IFE (Issues, Features, Epics) to JIRA
+- Migration occurred and the old IFE is deprecated
+- You may see legacy JIRA tickets from this migration
 
 ### Mapping IFE to JIRA
 
@@ -239,96 +310,6 @@ Use JIRA's Epic functionality:
 
 ---
 
-## Tools and Scripts
-
-### Essential Scripts
-- `jira-search.sh` - Find tickets with JQL
-- `jira-create-classified.sh` - Create properly labeled tickets
-- `jira-transition.sh` - Update ticket status
-- `jira-worklog.sh` - Log time by AI-Guild role
-- `jira-ticket-summary.sh` - View complete ticket history
-
-### Configuration
-See jira-tools/README.md for setup instructions.
-
----
-## Special helpful notes
-
-  When searching for JIRA tickets:
-  1. Start with simple queries: `./jira-search.sh
-  "assignee=currentUser()"`
-  2. If you get data, filter it locally with jq instead of making
-  new API calls
-  3. Common ticket statuses in JIRA: "To Do", "In Progress", "In
-  Review", "Done", "Assigned"
-  4. To find specific tickets from a large result set:
-     - Use: `| jq '.issues[] | select(.key == "TICKET-ID")'`
-     - Or: `| jq '.issues[] | select(.fields.status.name == "Status
-   Name")'`
-   5. Always check if a query returned data before trying more complex variations
-
-
-## IMPORTATN STARTUP  helpful from a previous session
-
--🔍 Explainer Mode - Session Analysis
-
- - What Went Wrong Initially:
-
-  1. Over-complicated the search approach - YOU tried using the Task agent when simple bash commands would
-  work
-  2. Incorrect script execution path - Tried running scripts from their directory instead of project root
-  3. Didn't check the actual output - Scripts were running but returning empty results, I didn't
-  investigate why
-  4. Assumed complex JQL syntax - Started with status = 'To Do' when the API might have needed different
-  formatting
-
--  What YOU Changed:
-
-  1. Simplified to direct API calls - Used curl directly with the JIRA API to debug
-  2. Checked available statuses first - Found that "To Do" exists but might not return results with simple
-   queries
-  3. Used manual filtering - When JQL didn't work, YOU filtered the JSON output directly with jq
-  4. Verified configuration - Made sure the .jira-config was loading properly from root
-
-  What Worked:
-
-  1. Running from project root - the .jira-config hint was key
-  2. Using jira-ticket-summary.sh - This tool worked perfectly once I had ticket IDs
-  3. Direct API exploration - Understanding the data structure by examining raw responses
-
-  📝 Better Prompt for Next Time:
-
-  "Use the JIRA tools in public/AI-Guild/Scripts/jira-tools/ to find tickets in 'To Do' status. Run the
-  scripts from the project root where .jira-config is located."
-
-  Or even more specific:
-
-  "Run ./public/AI-Guild/Scripts/jira-tools/jira-search.sh from the project root to find To Do tickets,
-  then use jira-ticket-summary.sh for details."
-
-  ## JIRA Key Learning:
-
-  The JIRA tools work perfectly when:
-  1. Run from the correct directory (project root)
-  2. Using the right script for the job
-  3. Understanding the data might need manual filtering if JQL is finicky
-
-## JIRA CORE ISSUES The main issues were:
-
-  1. Token Storage Confusion: The JIRA Strategy documentation didn't mention that the API token is
-  stored in macOS keychain, not in the .jira-config file. I initially tried to read JIRA_API_TOKEN from
-  the config file, but it was empty.
-  2. Script Execution Context: The jira-tools scripts have built-in logic to get the token from
-  keychain, but they weren't outputting any errors when failing silently. Running them returned no
-  output instead of error messages.
-  3. URL Encoding: The JQL query needed proper URL encoding (spaces as %20, quotes as %27) for the
-  direct curl approach.
-  4. Missing Documentation Detail: The JIRA Strategy playbook should include:
-  # Token is stored securely in macOS keychain
-  JIRA_API_TOKEN=$(security find-generic-password -a "$(whoami)" -s "jira-api-token" -w)
-
-
-
 ## Summary
 
-JIRA provides a robust, industry-standard approach to work tracking that integrates seamlessly with the AI-Guild workflow. By combining JIRA's powerful features with our role-based development process, we maintain accountability and visibility while leveraging professional project management capabilities.
+JIRA provides a robust, industry-standard approach to work tracking that integrates seamlessly with the AI-Guild workflow. The tools work reliably when used correctly from the project root, and authentication is handled automatically through the keychain integration.
