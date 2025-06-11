@@ -79,13 +79,13 @@ After every working session, update the tracking markdown file with an **SNR blo
 ### SNR - YYYY-MM-DD-HH-MM
 
 **S — Summary:**
-What was completed this session.
+🔷 S — Summarize: What was completed this session.
 
 **N — Next Steps:**
-What will be tackled next.
+🟡 N — Next Steps: What will be tackled next.
 
 **R — Request / Role:**
-What help is needed (if any), or who’s responsible next.
+🟩 R — Request / Role: What help is needed (if any), or who’s responsible next.
 
 ```
 

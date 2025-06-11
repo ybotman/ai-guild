@@ -1,0 +1,203 @@
+======================================
+IFE to JIRA Migration
+Started: Tue Jun 10 17:24:07 EDT 2025
+Project: TIEMPO
+======================================
+
+Processing Issues...
+-------------------
+Creating ticket for: IFE-1004: SelectVenuesMenuNotWorking
+❌ Failed: IFE-1004: SelectVenuesMenuNotWorking
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1017: ViewEventVenueDisplayEnhancement
+❌ Failed: IFE-1017: ViewEventVenueDisplayEnhancement
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1019: BuildErrorsAfterESLintFixes
+❌ Failed: IFE-1019: BuildErrorsAfterESLintFixes
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1020: UserSettingsHamburgerMenuCrash
+❌ Failed: IFE-1020: UserSettingsHamburgerMenuCrash
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1021: OrganizerSelectionFilterNotWorking
+❌ Failed: IFE-1021: OrganizerSelectionFilterNotWorking
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1022: UserSettingsUpdateNotification
+❌ Failed: IFE-1022: UserSettingsUpdateNotification
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1023: RegionalOrganizerSettingsUpdateNotification
+❌ Failed: IFE-1023: RegionalOrganizerSettingsUpdateNotification
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1025: LocationContextUIInconsistencies
+❌ Failed: IFE-1025: LocationContextUIInconsistencies
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1026: SelectInputValueMismatch
+❌ Failed: IFE-1026: SelectInputValueMismatch
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1028: FacebookGoogleSameEmailAuthConflict
+❌ Failed: IFE-1028: FacebookGoogleSameEmailAuthConflict
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1037: CalendarEventDisplayEnhancement
+❌ Failed: IFE-1037: CalendarEventDisplayEnhancement
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1039: ListViewDayHeaderFormat
+❌ Failed: IFE-1039: ListViewDayHeaderFormat
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1040: ListViewEventRowOrder
+❌ Failed: IFE-1040: ListViewEventRowOrder
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1041: MonthViewEventDisplay
+❌ Failed: IFE-1041: MonthViewEventDisplay
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1001: LocationModalMapDots
+❌ Failed: IFE-1001: LocationModalMapDots
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1002: AuthenticationRolesNotLoaded
+❌ Failed: IFE-1002: AuthenticationRolesNotLoaded
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1003: CalendarViewNoEvents
+❌ Failed: IFE-1003: CalendarViewNoEvents
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1005: EventInsertFailDueToMalformedVenueGeolocation
+❌ Failed: IFE-1005: EventInsertFailDueToMalformedVenueGeolocation
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1006: EventEditModalMissingCurrentValues
+❌ Failed: IFE-1006: EventEditModalMissingCurrentValues
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1007: EventUpdateFailDueToEmptyObjectIds
+❌ Failed: IFE-1007: EventUpdateFailDueToEmptyObjectIds
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1008: GeoLocationAndEventsInitializationBugs
+❌ Failed: IFE-1008: GeoLocationAndEventsInitializationBugs
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1009: RegionalOrganizerSettingsNotWorking
+❌ Failed: IFE-1009: RegionalOrganizerSettingsNotWorking
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1010: ViewEventEditDeleteRoleControl
+❌ Failed: IFE-1010: ViewEventEditDeleteRoleControl
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1018: ESLintErrorsCleanup
+❌ Failed: IFE-1018: ESLintErrorsCleanup
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1022: UserSettingsUpdateNotification
+❌ Failed: IFE-1022: UserSettingsUpdateNotification
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1024: OrganizerSelectionEmptyForBoston
+❌ Failed: IFE-1024: OrganizerSelectionEmptyForBoston
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1027: IPLocationInitializationError
+❌ Failed: IFE-1027: IPLocationInitializationError
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1029: DebugMenuTestProdDeployment
+❌ Failed: IFE-1029: DebugMenuTestProdDeployment
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1030: DuplicatePrivacyPolicyMenuItems
+❌ Failed: IFE-1030: DuplicatePrivacyPolicyMenuItems
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1031: RemoveCalendarLocationBar
+❌ Failed: IFE-1031: RemoveCalendarLocationBar
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1033: GoogleAnalyticsUndefinedId
+❌ Failed: IFE-1033: GoogleAnalyticsUndefinedId
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1034: EventViewTimezoneAndCategoryDisplay
+❌ Failed: IFE-1034: EventViewTimezoneAndCategoryDisplay
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1035: AnonymousUserSubmenuNotBypassed
+❌ Failed: IFE-1035: AnonymousUserSubmenuNotBypassed
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1036: ListViewTimeFormatLayout
+❌ Failed: IFE-1036: ListViewTimeFormatLayout
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-1038: CustomList21DaysView
+❌ Failed: IFE-1038: CustomList21DaysView
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+
+Processing Features...
+--------------------
+Creating ticket for: IFE-3001: VenueSelectionModal
+❌ Failed: IFE-3001: VenueSelectionModal
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3003: RemoveWeeklyCalendarView
+❌ Failed: IFE-3003: RemoveWeeklyCalendarView
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3004: CalendarShowImages
+❌ Failed: IFE-3004: CalendarShowImages
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3005: ThreeCategoryCircles
+❌ Failed: IFE-3005: ThreeCategoryCircles
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3006: UpcomingFeaturesMenu
+❌ Failed: IFE-3006: UpcomingFeaturesMenu
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3007: AboutCalendarSection
+❌ Failed: IFE-3007: AboutCalendarSection
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3008: SavedFiltersAndSettings
+❌ Failed: IFE-3008: SavedFiltersAndSettings
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3009: RegionalOrganizerPhotoApproval
+❌ Failed: IFE-3009: RegionalOrganizerPhotoApproval
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3010: RegionalOrganizerPaidTiers
+❌ Failed: IFE-3010: RegionalOrganizerPaidTiers
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3011: NamedUserPaidTier
+❌ Failed: IFE-3011: NamedUserPaidTier
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3012: ListViewStartToday
+❌ Failed: IFE-3012: ListViewStartToday
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3013: ThreeMonthScrollableView
+❌ Failed: IFE-3013: ThreeMonthScrollableView
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3017: MonthlyViewFormattingImprovements
+❌ Failed: IFE-3017: MonthlyViewFormattingImprovements
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3018: EnhancedUserInfoDisplay
+❌ Failed: IFE-3018: EnhancedUserInfoDisplay
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3019: RoleBasedEventSubmenu
+❌ Failed: IFE-3019: RoleBasedEventSubmenu
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3020: EdgeGeolocationBeta
+❌ Failed: IFE-3020: EdgeGeolocationBeta
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3002: DebugMenu
+❌ Failed: IFE-3002: DebugMenu
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3003: EventOrganizerFollowing
+❌ Failed: IFE-3003: EventOrganizerFollowing
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3005: ThreeCategoryCircles
+❌ Failed: IFE-3005: ThreeCategoryCircles
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3014: SimplifyFirebaseAuth
+❌ Failed: IFE-3014: SimplifyFirebaseAuth
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3015: ModernSansSerifTypography
+❌ Failed: IFE-3015: ModernSansSerifTypography
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-3016: ExpandableCategoryFilter
+❌ Failed: IFE-3016: ExpandableCategoryFilter
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+
+Processing Epics...
+------------------
+⚠️  Skipping file with unexpected format: PMR_5001_LocationModalFix
+⚠️  Skipping file with unexpected format: PMR_Geolocation_Hierarchy
+⚠️  Skipping file with unexpected format: PMR_LocationModalFix
+⚠️  Skipping file with unexpected format: VENUES_MIGRATION
+⚠️  Skipping file with unexpected format: VENUES_TEST_CASES
+Creating ticket for: IFE-5003: ServiceLayerArchitecture Approach
+❌ Failed: IFE-5003: ServiceLayerArchitecture Approach
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+Creating ticket for: IFE-5003: ServiceLayerArchitecture
+❌ Failed: IFE-5003: ServiceLayerArchitecture
+   Error: {"errorMessages":["There was an error parsing JSON. Check that your request body is valid."]}
+
+======================================
+Migration Complete!
+Created: 0 tickets
+Failed: 59 tickets
+Log saved to: ife-migration-20250610-172407.log
+======================================

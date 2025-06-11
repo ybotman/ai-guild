@@ -1,4 +1,4 @@
-## Directives or COMMANDS that you should know and abide by :
+## Directives that you should know and abide by :
 
 - **Startup, START**  
   Begin or initialize the current session or process.
@@ -22,15 +22,8 @@
 - **Status**  
   Request KANBAN mode to read the IFE # and summarize what we are doing.
 
-- **Roles**
-  Lists all the roles in the guild. 
-
-- **SNR** (Summarize, NextSteps, RequestRole)  
+- **SNR (Summarize, NextSteps, Request Role)**  
   Provide a summary, outline next steps, and request the next role.
- standard SNR protocol is :                            
-                                                   
- - 🔷 **S—Summarize**: Recap the explanation provided and any clarifications made              
- - 🟡 **N—Next Steps**: Suggest how to proceed based on improved understanding                  - 🟩 **R—Request Role**: Suggest an appropriate next role based on the clarified direction
 
 - **SWITCH &lt;role&gt;**  
   Switch to the specified role and abide by its guidelines, then continue.
@@ -46,6 +39,13 @@
 
 - **CLEANUP &lt;text&gt;**
   This is requesting a ESLINT CLEANUP process. Mostly this is a request to fix linting error in the code we just modified. So, if the list of errors is small then go ahead a fix them. Keep in mind it is ok to leave at the branch level LINT errors that are outside you code changes.   If the directive is "CLEANUP ALL" then you must go through all the eslint errors and fix them
+
+- **CRK** - Confidence Level, Risks, Knowlege Gap assesmsnet.
+ - Asseess you confinece in conmpleting the said task. 0% - 100%
+ - what risks if any
+ - what knowlege gaps are present
+ - if you have a assement score below 85 you must present the reasinging.
+ - It is possible (but not lickly) to be auhtorized into a build modes even if lower than 85%
 
 - **Directives &lt;text&gt;** or - **Commands &lt;text&gt;**
   List all the directives (this list) to the user with a mini descr. Compressed list but all directives
