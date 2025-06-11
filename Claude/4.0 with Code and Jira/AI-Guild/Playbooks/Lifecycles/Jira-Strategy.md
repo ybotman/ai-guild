@@ -260,6 +260,53 @@ See jira-tools/README.md for setup instructions.
    5. Always check if a query returned data before trying more complex variations
 
 
+## IMPORTATN STARTUP  helpful from a previous session
+
+-🔍 Explainer Mode - Session Analysis
+
+ - What Went Wrong Initially:
+
+  1. Over-complicated the search approach - YOU tried using the Task agent when simple bash commands would
+  work
+  2. Incorrect script execution path - Tried running scripts from their directory instead of project root
+  3. Didn't check the actual output - Scripts were running but returning empty results, I didn't
+  investigate why
+  4. Assumed complex JQL syntax - Started with status = 'To Do' when the API might have needed different
+  formatting
+
+-  What YOU Changed:
+
+  1. Simplified to direct API calls - Used curl directly with the JIRA API to debug
+  2. Checked available statuses first - Found that "To Do" exists but might not return results with simple
+   queries
+  3. Used manual filtering - When JQL didn't work, YOU filtered the JSON output directly with jq
+  4. Verified configuration - Made sure the .jira-config was loading properly from root
+
+  What Worked:
+
+  1. Running from project root - the .jira-config hint was key
+  2. Using jira-ticket-summary.sh - This tool worked perfectly once I had ticket IDs
+  3. Direct API exploration - Understanding the data structure by examining raw responses
+
+  📝 Better Prompt for Next Time:
+
+  "Use the JIRA tools in public/AI-Guild/Scripts/jira-tools/ to find tickets in 'To Do' status. Run the
+  scripts from the project root where .jira-config is located."
+
+  Or even more specific:
+
+  "Run ./public/AI-Guild/Scripts/jira-tools/jira-search.sh from the project root to find To Do tickets,
+  then use jira-ticket-summary.sh for details."
+
+  Key Learning:
+
+  The JIRA tools work perfectly when:
+  1. Run from the correct directory (project root)
+  2. Using the right script for the job
+  3. Understanding the data might need manual filtering if JQL is finicky
+
+
+
 ## Summary
 
 JIRA provides a robust, industry-standard approach to work tracking that integrates seamlessly with the AI-Guild workflow. By combining JIRA's powerful features with our role-based development process, we maintain accountability and visibility while leveraging professional project management capabilities.
