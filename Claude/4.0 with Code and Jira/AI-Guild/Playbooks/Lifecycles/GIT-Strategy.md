@@ -1,4 +1,4 @@
-# Git Promotion and CI/CD Strategy for I/F/E Management
+# Git Promotion and CI/CD Strategy for JIRA Management
 
 ## 🌐 Environment Promotion Flow
 
@@ -10,20 +10,16 @@ DEVL → TEST → PROD
 
 ## 🔧 Assumptions
 
-1. **User Responsibility:** Developers are responsible for placing correct versions into `DEVL` before beginning I/F/E work.
+1. **User Responsibility:** Developers are responsible for placing correct versions into `DEVL` before beginning Jira work.
 2. **Explicit Promotion:** Versions do **not** auto-promote. Promotions to `TEST`, or `PROD` require explicit Guild approval and execution.
-3. **Numbering Scheme:**
-   - Issues: `Issue-1000+`
-   - Features: `Feature-3000+`
-   - Epics: `Epic-5000+`
-4. **New I/F/E Creation:** Triggers the assignment of a new sequential number and title. This is the starting point for any branch work.
+4. **JIRA :** Jira is the ticket scope tracking system. This is the starting point for any branch work.
 
 ---
 
 ## 🚧 Git Workflow — DEVL Phase
 
 ### 🔹 Strategy
-Each **Issue**, **Feature**, or **Epic** is developed in an individual branch created from `DEVL`. All progress is documented in markdown with session-based SNR entries.
+Each Branch is tied to some JIRA Ticket or Group of tickets (eg story or epic etc) is developed in an individual branch created from `DEVL`. All progress is documented in markdown with session-based SNR entries.
 
 ---
 
@@ -33,7 +29,7 @@ Each **Issue**, **Feature**, or **Epic** is developed in an individual branch cr
 |------|-------------|
 | 1. | Confirm current branch is `DEVL`. Abort if not. |
 | 2. | If working on an existing I/F/E, checkout the corresponding branch. |
-| 3. | For new work, assign a number and create a new branch: <br>`issue/1022-title`, `feature/3018-title`, `epic/5002-title` |
+| 3. | For new work, assign a number and create a new branch: based on JIRA Tickets
 | 4. | Initial commit includes the creation or update of I/F/E tracking markdown. |
 | 5. | Code in small commits. After each session, record an SNR (Summarize, Next, Role). |
 | 6. | Run ESLint: `npm run lint` |
@@ -47,17 +43,8 @@ Each **Issue**, **Feature**, or **Epic** is developed in an individual branch cr
 ---
 
 ### 🏷 Branch Naming Conventions
-
-| Type    | Format                              |
-|---------|-------------------------------------|
-| Issue   | `issue/1022-user-name-blank`        |
-| Feature | `feature/3018-add-user-location`    |
-| Epic    | `epic/5002-refactor-auth-service`   |
-
-- Use lowercase only.
-- Replace spaces with hyphens.
-- Always prefix with `issue/`, `feature/`, or `epic/`.
-
+TYPE|JIRA-NUMBER|ShortDesc(CamelCased)
+<EPIC><STORY><TASK>... | <TIEMPO-23> | ViewEventVenueDisplay
 ---
 
 ## ✅ Merge Requirements (into DEVL)

@@ -244,6 +244,21 @@ Use JIRA's Epic functionality:
 See jira-tools/README.md for setup instructions.
 
 ---
+## Special helpful notes
+
+  When searching for JIRA tickets:
+  1. Start with simple queries: `./jira-search.sh
+  "assignee=currentUser()"`
+  2. If you get data, filter it locally with jq instead of making
+  new API calls
+  3. Common ticket statuses in JIRA: "To Do", "In Progress", "In
+  Review", "Done", "Assigned"
+  4. To find specific tickets from a large result set:
+     - Use: `| jq '.issues[] | select(.key == "TICKET-ID")'`
+     - Or: `| jq '.issues[] | select(.fields.status.name == "Status
+   Name")'`
+   5. Always check if a query returned data before trying more complex variations
+
 
 ## Summary
 
