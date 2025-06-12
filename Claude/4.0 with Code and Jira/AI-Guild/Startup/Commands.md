@@ -49,3 +49,6 @@
 
 - **Directives &lt;text&gt;** or - **Commands &lt;text&gt;**
   List all the directives (this list) to the user with a mini descr. Compressed list but all directives
+
+- **Self-Report** or **Self-Diagnose** 
+This trigger s the 🔬 Self-Introspective Analysis Mod— *Session Review & Learning* mode.  
