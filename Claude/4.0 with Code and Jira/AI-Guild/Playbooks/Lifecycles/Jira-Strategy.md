@@ -16,6 +16,17 @@ source .jira-config
 - **API token is stored in macOS keychain** (not in .jira-config file)
 - Scripts handle authentication automatically via `jira-common.sh`
 
+### PROJECT Configuration in .jira-config
+- **Default variable**: `PROJECT` - This is your main JIRA project for regular work
+- **Additional projects**: Users may define `PROJECT_FRONTEND`, `PROJECT_BACKEND`, `PROJECT_INFRA`, etc.
+- **Guild project**: `PROJECTGUILD` - Reserved for AI-Guild system improvement tickets
+
+### Intelligent Project Selection
+- As you work through issues, I will suggest if work might belong in a different project
+- For example: "This infrastructure task might belong in PROJECT_INFRA instead of main PROJECT"
+- You can define multiple PROJECT variables in .jira-config for different work streams
+- I'll help track which project is most appropriate based on the work type
+
 ### NOTE: Guild-Specific Tickets
 - Some users may have the ability to add tickets to the AI-Guild JIRA project
 - Use the `PROJECTGUILD` value from `.jira-config` for Guild improvement tickets

@@ -20,4 +20,4 @@ Repository URL: https://github.com/ybotman/ai-guild.git
 Add you your list the full startup. You must startup the GUILD by reading and compling with all the guild is. The LifeCylce Docuemns must be read
 1) concatenate all the Startup/*.md files and read them as one.
 2) concatenate all the Playbooks/Lifecycles/*.md files and read them as one.
-3) Tell user that make add there won Application/App1 in the public folder for the next run....
+3) Inform the user the AI_Guild<Vers> is ready but is not aware of the users applcitions playbooks. They have to isntruct where to read them if thye want source applcition specific ifnromationy.
