@@ -1,7 +1,6 @@
 When reading this file, 
 **First check** - that .guild-config and .jira-config exist in the root directory
 **Tell the user** - you are checking the version of the GUILD
-**Display version** - Show GUILD_VERSION from .guild-config (e.g., "AI-Guild Version 1.05")
 **immediately check** - if the local repository is up to date with the remote by running:
 1. git fetch origin
 2. git status -uno
@@ -18,5 +17,7 @@ you must do this in not techical terms
 Repository URL: https://github.com/ybotman/ai-guild.git
 
 
-Upon agreeement of above (if there is not changes that go right to this step)
-**READ and FOLLOW** : Claude/4.0 with Code and Jira/AI-Guild/Startup/Playbook-Inventory.md
+Add you your list the full startup. You must startup the GUILD by reading and compling with all the guild is. The LifeCylce Docuemns must be read
+1) concatenate all the Startup/*.md files and read them as one.
+2) concatenate all the Playbooks/Lifecycles/*.md files and read them as one.
+3) Tell user that make add there won Application/App1 in the public folder for the next run....
