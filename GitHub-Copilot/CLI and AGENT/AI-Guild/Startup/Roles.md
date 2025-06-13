@@ -303,16 +303,14 @@ Maintain clear transitions between modes.
 
 ---
 ### 🔬 Self-Introspective Analysis Mode — *Session Review & Learning*
-**IMPORTANT NOTE ABOUT this ROLE** --> IT uses its OWN JIRA PROJECT .jira-config PROJECTGUILD Variable. This to track tickets but NOT the time Time goes to the standard PROJECT env variable from .jira-config
-:
 
 - ✅ Reviews the current session to identify successes, failures, and learning opportunities
 - ✅ Categorizes findings into: 1) Local Bash commands, 2) JIRA connectivity/params, 3) GitHub connectivity/commits/promotions, 4) Branching locations, 5) User guidance improvements
 - ✅ Documents patterns of errors (e.g., wrong paths, missing parameters, incorrect assumptions)
 - ✅ Identifies better paths discovered after initial failures
-- ✅ Creates JIRA tickets for major findings that could improve the AI Guild system. This project is the "PROJECTGUILD" .jira-config (Probably Project "AIGUILD")
+- ✅ Creates JIRA tickets for major findings that could improve the AI Guild system
 - ✅ Activated by user command `retrospective` or `session review`,  `self diagnose`, `self analisys`
-- ✅ Logs Time in JIRA in the ORIGNAL .jira-config PROJECT variable.
+- ✅ Logs Time in JIRA
 - ✅ Logs in JIRA: Session analysis findings, improvement recommendations, and patterns identified
 - ❌ Does NOT modify code or system behavior
 - ❌ Does NOT criticize the user, only analyzes system interactions

@@ -3,23 +3,24 @@
 ## 🌐 Environment Promotion Flow
 
 
-DEVL  → BRANCHES  → DEVL
-DEVL → TEST → PROD
+DEVELOPMENT → BRANCHES → DEVELOPMENT
+DEVELOPMENT → TESTING → PRODUCTION
+(Branch names as defined in .guild-config)
 
 ---
 
 ## 🔧 Assumptions
 
-1. **User Responsibility:** Developers are responsible for placing correct versions into `DEVL` before beginning Jira work.
-2. **Explicit Promotion:** Versions do **not** auto-promote. Promotions to `TEST`, or `PROD` require explicit Guild approval and execution.
+1. **User Responsibility:** Developers are responsible for placing correct versions into the DEVELOPMENT branch (as defined in .guild-config) before beginning Jira work.
+2. **Explicit Promotion:** Versions do **not** auto-promote. Promotions to TESTING or PRODUCTION branches require explicit Guild approval and execution.
 4. **JIRA :** Jira is the ticket scope tracking system. This is the starting point for any branch work.
 
 ---
 
-## 🚧 Git Workflow — DEVL Phase
+## 🚧 Git Workflow — DEVELOPMENT Phase
 
 ### 🔹 Strategy
-Each Branch is tied to some JIRA Ticket or Group of tickets (eg story or epic etc) is developed in an individual branch created from `DEVL`. All progress is documented in markdown with session-based SNR entries.
+Each Branch is tied to some JIRA Ticket or Group of tickets (eg story or epic etc) is developed in an individual branch created from the DEVELOPMENT branch. All progress is documented in markdown with session-based SNR entries.
 
 ---
 
@@ -27,18 +28,18 @@ Each Branch is tied to some JIRA Ticket or Group of tickets (eg story or epic et
 
 | Step | Description |
 |------|-------------|
-| 1. | Confirm current branch is `DEVL`. Abort if not. |
-| 2. | If working on an existing I/F/E, checkout the corresponding branch. |
-| 3. | For new work, assign a number and create a new branch: based on JIRA Tickets
-| 4. | Initial commit includes the creation or update of I/F/E tracking markdown. |
+| 1. | Confirm current branch is the DEVELOPMENT branch (as defined in .guild-config). Abort if not. |
+| 2. | If working on an existing JIRA ticket, checkout the corresponding branch. |
+| 3. | For new work, create a new branch based on JIRA ticket number. |
+| 4. | Initial commit includes the creation or update of JIRA tracking markdown. |
 | 5. | Code in small commits. After each session, record an SNR (Summarize, Next, Role). |
 | 6. | Run ESLint: `npm run lint` |
 | 7. | Run Build: `npm run build` |
 | 8. | Run Locally: `npm run dev` |
 | 9. | Request final review and approval. |
-| 10. | Upon approval, merge into `DEVL`. |
+| 10. | Upon approval, merge into the DEVELOPMENT branch. |
 | 11. | Delete the working branch after successful merge. |
-| 12. | AI Guild logs the merge event under `~/Proctions/DEVL/merge-<timestamp>.md` with all Issue/Feature/Epic refs. |
+| 12. | AI Guild logs the merge event under `~/Proctions/DEVELOPMENT/merge-<timestamp>.md` with all JIRA ticket references. |
 
 ---
 
@@ -47,7 +48,7 @@ TYPE|JIRA-NUMBER|ShortDesc(CamelCased)
 <EPIC><STORY><TASK>... | <TIEMPO-23> | ViewEventVenueDisplay
 ---
 
-## ✅ Merge Requirements (into DEVL)
+## ✅ Merge Requirements (into DEVELOPMENT branch)
 
 - ✔ No ESLint errors.
 - ✔ Successful build.
@@ -84,11 +85,11 @@ After every working session, update the tracking markdown file with an **SNR blo
 
 Start
 ↓
-Check DEVL Branch
+Check DEVELOPMENT Branch
 ↓
-Create/Checkout I/F/E Branch
+Create/Checkout JIRA Branch
 ↓
-Initial Commit (I/F/E doc)
+Initial Commit (JIRA tracking doc)
 ↓
 Code + SNRs
 ↓
@@ -96,7 +97,7 @@ Lint → Build → Dev Run
 ↓
 Final Review
 ↓
-Merge into DEVL
+Merge into DEVELOPMENT
 ↓
 Delete Branch
 
@@ -106,7 +107,7 @@ Delete Branch
 
 ## 📌 Next Phase Work
 
-- Define TEST Promotion Rules (DEVL → TEST)
+- Define TESTING Promotion Rules (DEVELOPMENT → TESTING)
 - Add GitHub Action for enforcing lint/build prior to merges (optional)
 
 ---
@@ -117,27 +118,27 @@ Delete Branch
 
 🔐 Guild Rules Implied and Enforced:
 
-[DEV Work: Local Branches from DEVL]
+[DEV Work: Local Branches from DEVELOPMENT]
        ↓
-[Merge into Local DEVL]  ← Guild merges
+[Merge into Local DEVELOPMENT]  ← Guild merges
        ↓
-[Push Local DEVL to origin/DEVL]
+[Push Local DEVELOPMENT to origin/DEVELOPMENT]
        ↓
-[Guild merges DEVL → origin/TEST] (remote only)
+[Guild merges DEVELOPMENT → origin/TESTING] (remote only)
        ↓
-[Guild merges TEST → origin/PROD] (remote only)
+[Guild merges TESTING → origin/PRODUCTION] (remote only)
        ↓
 [Guild logs summary in ~/Proctions/ENV/;merge-*.md]
 
 ---
 ## General GIT rules
-- We do NOT udpate directly in PROD or TEST or even origin DEVL without approval.  You must ask to do these update here
-- We do NOT have local TEST and PROD.  OUr only full env are Local DEVL (and update branches), and origin DEVL, TEST, PROD.
-- Promotion is always a GitHub push to remote origin/TEST or origin/PROD, using explicit, documented merge.
+- We do NOT update directly in PRODUCTION or TESTING or even origin DEVELOPMENT without approval. You must ask to do these updates here
+- We do NOT have local TESTING and PRODUCTION. Our only full env are Local DEVELOPMENT (and update branches), and origin DEVELOPMENT, TESTING, PRODUCTION.
+- Promotion is always a GitHub push to remote origin/TESTING or origin/PRODUCTION, using explicit, documented merge.
 - Merge events are the only mechanism by which code moves forward.
 - Guild logs the merge summary in ~/Proctions/ENV/, not in the remote repo itself — ensuring this is tracked separately from code.
-- Guild works in local DEVL branch only OR the IFE branch. 
-- No local work is done in TEST or PROD.
+- Guild works in local DEVELOPMENT branch only OR the JIRA ticket branch. 
+- No local work is done in TESTING or PRODUCTION branches.
 
 
 

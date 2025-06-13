@@ -32,18 +32,3 @@ You must know the roles to read this playbooks
 * Each step should include a clear SNR (Summarize, Next Steps, Request Role) block before handoff.*
 * Without confirmin to the users,Every hand off to builder mode needs a CRK: "Confidence, Risks and Knowledge Gap Assemement"
 * CRK needs to be Added you your check list the JIRA LOG Time and Comments findings
-
-## Self-Introspective Analysis Mode Instructions
-
-When the user invokes **Self-Report**, **Self-Diagnose**, or **Retrospective** roles:
-
-1. **First, check if PROJECTGUILD exists in .jira-config**
-   - If PROJECTGUILD exists → Test JIRA connection once, then create improvement tickets
-   - If PROJECTGUILD is missing → Write lessons to `/public/AI-Guild/Playbooks/Lifecycles/LessonsLearned.md`
-
-2. **For LessonsLearned.md entries:**
-   - Document patterns, failures, and improvements discovered
-   - These are learning notes, NOT tickets
-   - Include timestamp, session context, and actionable insights
-   - Format: Date, Finding Category, Description, Recommendation
-
