@@ -13,15 +13,17 @@
   Summarize what you know about the current guild and playbooks you have read, specifically by name.  
   _You must NOT execute any BASH or shell commands for this directive._
 
-- **Open (I/F/E)**  
-  Open a new Issue, Feature, or Epic.
+- **Test Jira**
+    Test the Jira Connection
+  
+- **Start Work****
 
-- **Close (I/F/E)**  
-  Close an existing Issue, Feature, or Epic.
+- **Jira <State>
+  Returns the Ticket summary in the Jira State Like Jira <In Process> <Backlog>, etc
 
-- **Status**  
-  Request KANBAN mode to read the IFE # and summarize what we are doing.
-
+- **FTP**
+  Means FOllow the Process.  Sometime the guild gets focus on new areas and needs to be refocused to foolow the process of the guild
+   
 - **Roles**
   Lists all the roles in the guild. 
 
@@ -30,7 +32,8 @@
  standard SNR protocol is :                            
                                                    
  - 🔷 **S—Summarize**: Recap the explanation provided and any clarifications made              
- - 🟡 **N—Next Steps**: Suggest how to proceed based on improved understanding                  - 🟩 **R—Request Role**: Suggest an appropriate next role based on the clarified direction
+ - 🟡 **N—Next Steps**: Suggest how to proceed based on improved understanding
+ - 🟩 **R—Request Role**: Suggest an appropriate next role based on the clarified direction
 
 - **SWITCH &lt;role&gt;**  
   Switch to the specified role and abide by its guidelines, then continue.
