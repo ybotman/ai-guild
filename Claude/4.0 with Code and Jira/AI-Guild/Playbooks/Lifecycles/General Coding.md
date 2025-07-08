@@ -27,4 +27,10 @@ so npm run dev -- -p 3020, to npm run dev -- -p 3030) are for you.
   - A successful `npm run build` and `npm run` test (ignoring port conflict issues).
   - A successful ESLint test.
 
+## when you need the calendar backend api
+ - a SWAGGER route is avabilble
+ - it is found witht he <backend env>/api-docs
+ - in devl this might be localhost:3010/api-docs
+ - or use <env var for next be url>/api-docs
+ - 
 ---
