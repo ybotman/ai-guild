@@ -25,11 +25,16 @@ useGuildCommands = "YES"
 useCustomGuildCommands  = "NO"
 
 # ----- JIRA
-useJIRA = "YES"
-useJjiraCLI = "NO"
-useJiraAPI = "NO"
 
+useJIRA = "YES"
+useJjiraCLI = "YES" 
+useJiraAPI = "NO"
 JiraConfigPath = "./"
+
+JiraCLIBase = "jira --config ./.jira.d/config.yml"
+#JiraCLIBase = "jira"
+
+
 
 # ----- BRANCH
 useBranchLogic = "YES"

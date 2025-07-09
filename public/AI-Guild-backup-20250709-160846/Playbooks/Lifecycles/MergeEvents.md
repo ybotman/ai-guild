@@ -63,6 +63,10 @@ Every merge event document should follow this standard template:
 
 ## 📌 Related Items
 
+- **Issues:** {LIST_OF_ISSUE_IDS}
+- **Features:** {LIST_OF_FEATURE_IDS}
+- **Epic(s):** {LIST_OF_EPIC_IDS}
+
 ---
 
 ## 📝 Description
