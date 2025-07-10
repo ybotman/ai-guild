@@ -3,7 +3,7 @@ set -euo pipefail
 
 # === CONFIG ===
 REPO_URL="https://github.com/ybotman/ai-guild.git"
-SPARSE_PATH="Claude/1.1.0/AI-Guild"
+SPARSE_PATH="Claude/1.1.1/AI-Guild"
 TARGET_DIR="public/AI-Guild"
 BRANCH="main"
 

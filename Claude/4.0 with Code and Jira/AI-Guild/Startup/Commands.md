@@ -16,9 +16,7 @@
 - **Test Jira**
     Test the Jira Connection
   
-- **Start Work****
-
-- **Jira <State>
+- **Jira <State>**
   Returns the Ticket summary in the Jira State Like Jira <In Process> <Backlog>, etc
 
 - **FTP**
