@@ -96,10 +96,7 @@ mkdir -p "$TARGET_DIR"
 echo "⚙️ Copying and flattening '$SPARSE_PATH' to '$TARGET_DIR/'"
 cp -r "$TEMP_DIR/$SPARSE_PATH"/* "$TARGET_DIR/"
 
-# 9. Cleanup temp directory
-rm -rf "$TEMP_DIR"
-
-# 10. Copy NewCLAUDE.md to root CLAUDE.md (if it exists)
+# 9. Copy NewCLAUDE.md to root CLAUDE.md (if it exists)
 if [[ -f "$TEMP_DIR/$SPARSE_PATH/Setup/NewCLAUDE.md" ]]; then
   echo "📝 Copying NewCLAUDE.md to ./CLAUDE.md"
   cp "$TEMP_DIR/$SPARSE_PATH/Setup/NewCLAUDE.md" "./CLAUDE.md"
@@ -107,5 +104,8 @@ if [[ -f "$TEMP_DIR/$SPARSE_PATH/Setup/NewCLAUDE.md" ]]; then
 else
   echo "⚠️  Warning: $TEMP_DIR/$SPARSE_PATH/Setup/NewCLAUDE.md not found - skipping CLAUDE.md update"
 fi
+
+# 10. Cleanup temp directory
+rm -rf "$TEMP_DIR"
 
 echo "✅ Sparse-checkout of '$SPARSE_PATH' imported into $TARGET_DIR/"

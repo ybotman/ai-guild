@@ -41,11 +41,15 @@ Roles define the AI-Guilds (and indeed your) personas. Roles ahve resposnbilites
 -- Read comply with "public/AI-Guild/Startup/FullPlaybooksGuild.md"
 -- Read and comply with "public/AI-Guild/Startup/FullPlaybooksApplicatons.md"
 
+
 ## Step 5 : Configure JIRA CLI.
 -- important : We are using jira-cli, not go-jira
+-- Jira Important : if there is a local ./jira.d directtory then every jira command just be in the --config form :
+--> jira --config ./.jira.d/config.yml <commands sets>
+-- do not use the  --config if the ./jira.d folder is not presetent but warn the user if that fact. 
 -- get the evnriemrent varables with the exeucting the following command :  source ~/bin/load-jira-env.sh
 -- then get the list of in prpcess tickets with :
---> jira issue list -q 'assignee = currentUser() AND status = "In Progress"' \
+--> jira --config ./.jira.d/config.yml issue list -q 'assignee = currentUser() AND status = "In Progress"' 
 
 
 ## Step 6 : LOCAL CODE Quick Version Check**
