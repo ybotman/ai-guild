@@ -5,7 +5,7 @@ AI Guild is a comprehensive development methodology and workflow system designed
 ## Installation
 
 ```bash
-npm install -g guild
+npm install -g @hdts/guild
 ```
 
 ## Quick Start
