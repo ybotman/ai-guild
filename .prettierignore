@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Package files
+package-lock.json
+
+# Guild documentation (preserve original formatting)
+guild-docs/
+
+# Coverage
+coverage/

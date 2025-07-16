@@ -1,0 +1,31 @@
+# Source files
+src/
+tsconfig.json
+
+# Development files
+.gitignore
+.git/
+CLAUDE.md
+GUILD_MVP_SPECS.md
+
+# Test files
+test/
+*.test.*
+jest.config.*
+
+# Build artifacts
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Misc
+.guild/
+.guild-config

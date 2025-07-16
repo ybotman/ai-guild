@@ -1,0 +1,57 @@
+{
+  "name": "@hdts/guild",
+  "version": "0.1.0",
+  "description": "AI Guild is a comprehensive development methodology and workflow system designed to enable AI agents (like Claude) to work effectively with human developers on software projects. It provides structured playbooks, role definitions, and lifecycle management that AI agents can read and follow to deliver high-quality software.",
+  "main": "dist/lib/copyDocs.js",
+  "bin": {
+    "guild": "dist/bin/guild.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,js,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,js,json}\"",
+    "test": "jest",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ybotman/ai-guild.git"
+  },
+  "keywords": [
+    "ai",
+    "guild",
+    "development",
+    "workflow",
+    "claude",
+    "methodology"
+  ],
+  "author": "Toby Balsley <toby.balsley@gmail.com> (https://www.hdtsllc.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ybotman/ai-guild/issues"
+  },
+  "homepage": "https://github.com/ybotman/ai-guild#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/",
+    "guild-docs/",
+    "README.md"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^14.0.0",
+    "inquirer": "^8.2.6"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.8",
+    "@types/node": "^24.0.14",
+    "eslint": "^9.31.0",
+    "jest": "^30.0.4",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3"
+  }
+}
