@@ -15,7 +15,7 @@ program
   .command('setup')
   .description('Copy Guild documentation into your project')
   .option('--dry-run', 'Show what would be copied without actually copying')
-  .action(async (options) => {
+  .action(async options => {
     try {
       await setupCommand(options);
     } catch (error: any) {

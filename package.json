@@ -8,9 +8,12 @@
   },
   "scripts": {
     "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,js,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,js,json}\"",
     "test": "jest",
     "lint": "eslint .",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run typecheck && npm run build"
   },
   "repository": {
     "type": "git",
@@ -48,6 +51,7 @@
     "@types/node": "^24.0.14",
     "eslint": "^9.31.0",
     "jest": "^30.0.4",
+    "prettier": "^3.6.2",
     "typescript": "^5.8.3"
   }
 }

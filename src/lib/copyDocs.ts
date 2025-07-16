@@ -27,18 +27,18 @@ const fileMappings: FileMapping[] = [
   {
     source: path.join(packageRoot, 'guild-docs/.guild'),
     destination: '.guild',
-    isDirectory: true
+    isDirectory: true,
   },
   {
     source: path.join(packageRoot, 'guild-docs/Setup/NewCLAUDE.md'),
     destination: 'CLAUDE.md',
-    isDirectory: false
+    isDirectory: false,
   },
   {
     source: path.join(packageRoot, 'guild-docs/Setup/.guild-config.example'),
     destination: '.guild-config',
-    isDirectory: false
-  }
+    isDirectory: false,
+  },
 ];
 
 // Check if a file or directory exists
@@ -84,7 +84,7 @@ function getFilesToCopy(): FileToCopy[] {
 
   fileMappings.forEach(mapping => {
     const destination = path.resolve(process.cwd(), mapping.destination);
-    
+
     if (mapping.isDirectory) {
       // For directories, get all files recursively
       const getAllFiles = (dir: string, baseDir: string): void => {
@@ -94,19 +94,19 @@ function getFilesToCopy(): FileToCopy[] {
           const stats = fs.statSync(fullPath);
           const relativePath = path.relative(baseDir, fullPath);
           const destPath = path.join(destination, relativePath);
-          
+
           if (stats.isDirectory()) {
             getAllFiles(fullPath, baseDir);
           } else {
             files.push({
               source: fullPath,
               destination: destPath,
-              exists: exists(destPath)
+              exists: exists(destPath),
             });
           }
         });
       };
-      
+
       if (exists(mapping.source)) {
         getAllFiles(mapping.source, mapping.source);
       }
@@ -114,7 +114,7 @@ function getFilesToCopy(): FileToCopy[] {
       files.push({
         source: mapping.source,
         destination: destination,
-        exists: exists(destination)
+        exists: exists(destination),
       });
     }
   });
@@ -137,12 +137,12 @@ export async function setupCommand(options: SetupOptions): Promise<void> {
     console.log();
     console.log('The following operations would be performed:');
     console.log();
-    
+
     filesToCopy.forEach(file => {
       const status = file.exists ? chalk.yellow('[OVERWRITE]') : chalk.green('[CREATE]');
       console.log(`${status} ${file.destination}`);
     });
-    
+
     return;
   }
 
@@ -160,8 +160,8 @@ export async function setupCommand(options: SetupOptions): Promise<void> {
         type: 'confirm',
         name: 'confirm',
         message: 'Do you want to proceed with overwriting these files?',
-        default: false
-      }
+        default: false,
+      },
     ]);
 
     if (!confirm) {
@@ -177,7 +177,7 @@ export async function setupCommand(options: SetupOptions): Promise<void> {
 
   fileMappings.forEach(mapping => {
     const destination = path.resolve(process.cwd(), mapping.destination);
-    
+
     try {
       if (mapping.isDirectory) {
         copyDirectory(mapping.source, destination);
