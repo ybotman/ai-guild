@@ -1,6 +1,6 @@
 {
   "name": "@hdts/guild",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI Guild is a comprehensive development methodology and workflow system designed to enable AI agents (like Claude) to work effectively with human developers on software projects. It provides structured playbooks, role definitions, and lifecycle management that AI agents can read and follow to deliver high-quality software.",
   "main": "dist/lib/copyDocs.js",
   "bin": {

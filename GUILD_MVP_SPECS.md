@@ -2,7 +2,7 @@
 
 ## 1 Purpose
 
-Provide a command‑line interface (CLI) that developers can install globally via `npm install -g guild`. The CLI's MVP command, `guild setup`, boot‑straps a local project so an AI agent ("Guild") can load its context from the prepared documentation. The tool copies a curated set of **guild‑docs** resources into predictable locations inside the consumer's repository and performs minimal configuration.
+Provide a command‑line interface (CLI) that developers can install globally via `npm install -g @hdts/guild`. The CLI's MVP command, `guild setup`, boot‑straps a local project so an AI agent ("Guild") can load its context from the prepared documentation. The tool copies a curated set of **guild‑docs** resources into predictable locations inside the consumer's repository and performs minimal configuration.
 
 ## 2 Scope
 
@@ -28,7 +28,7 @@ Provide a command‑line interface (CLI) that developers can install globally vi
 ## 5 Assumptions
 
 1. Consumers run Node ≥ 18 LTS.
-2. Package is public on npm under the name **guild**.
+2. Package is public on npm under the name **@hdts/guild**.
 3. Installation is expected to be global; using `npx` is acceptable but not required.
 4. Consumers are comfortable with overwritten files after confirmation.
 
@@ -36,7 +36,7 @@ Provide a command‑line interface (CLI) that developers can install globally vi
 
 ### 6.1 Installation
 
-* The package is installable via `npm install -g guild`.
+* The package is installable via `npm install -g @hdts/guild`.
 * A symlinked executable **guild** is registered in the user's `$PATH`.
 
 ### 6.2 Command: `guild setup`
@@ -131,7 +131,7 @@ package root
 1. `guild update` command that performs a three‑way merge instead of raw overwrite.
 2. Flags to install subsets of docs (`--lifecycles`, `--startup`).
 3. Template variables inside docs to inject project‑specific metadata.
-4. Support for local install (`npx guild setup`).
+4. Support for local install (`npx @hdts/guild setup`).
 5. Telemetry opt‑in to collect anonymous usage stats.
 
 ---
